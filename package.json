@@ -1,0 +1,40 @@
+{
+  "name": "hammer-hew-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@hookform/resolvers": "^5.2.1",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "framer-motion": "^12.23.12",
+    "globals": "^16.3.0",
+    "lucide-react": "^0.542.0",
+    "postcss": "^8.5.6",
+    "react-helmet-async": "^2.0.5",
+    "react-hook-form": "^7.62.0",
+    "tailwindcss": "^3.4.15",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.39.1",
+    "vite": "^7.1.2",
+    "zod": "^4.1.5"
+  }
+}
