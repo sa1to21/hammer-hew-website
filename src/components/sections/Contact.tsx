@@ -7,9 +7,9 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: "Call Us",
-      primary: "(555) 123-4567",
+      primary: "(215) 555-4567",
       secondary: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
-      action: "tel:(555)123-4567",
+      action: "tel:(215)555-4567",
     },
     {
       icon: Mail,
@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: "Service Area",
-      primary: "Bay Area, California",
+      primary: "Philadelphia, Pennsylvania",
       secondary: "Free consultations within 25 miles",
       action: "#",
     },

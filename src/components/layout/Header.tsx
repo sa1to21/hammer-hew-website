@@ -74,11 +74,11 @@ const Header: React.FC = () => {
             
             {/* Phone */}
             <a 
-              href="tel:(555)123-4567" 
+              href="tel:(215)555-4567" 
               className="flex items-center space-x-2 text-slate-700 hover:text-emerald-600 transition-colors font-medium"
             >
               <Phone className="w-4 h-4" />
-              <span>(555) 123-4567</span>
+              <span>(215) 555-4567</span>
             </a>
             
             {/* Social Icons */}
@@ -146,11 +146,11 @@ const Header: React.FC = () => {
               
               {/* Phone */}
               <a 
-                href="tel:(555)123-4567" 
+                href="tel:(215)555-4567" 
                 className="flex items-center space-x-2 px-3 py-2 text-slate-700 hover:text-emerald-600 font-medium"
               >
                 <Phone className="w-4 h-4" />
-                <span>(555) 123-4567</span>
+                <span>(215) 555-4567</span>
               </a>
               
               {/* Social Icons */}

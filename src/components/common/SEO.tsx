@@ -12,9 +12,9 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Deck Construction & Restoration Services | Hammer & Hew | Bay Area",
-  description = "Professional deck construction, restoration & repair in Bay Area. Licensed & insured with 10-year warranty. Free estimates. Call (555) 123-4567",
-  keywords = "deck construction, deck restoration, deck repair, Bay Area, licensed contractor, deck builder",
+  title = "Deck Construction & Restoration Services | Hammer & Hew | Philadelphia",
+  description = "Professional deck construction, restoration & repair in Philadelphia, PA. Licensed & insured with 10-year warranty. Free estimates. Call (215) 555-4567",
+  keywords = "deck construction, deck restoration, deck repair, Philadelphia, Pennsylvania, licensed contractor, deck builder",
   image = "/og-image.jpg",
   url = "https://hammerandhew.com",
   type = "website",
@@ -25,9 +25,9 @@ const SEO: React.FC<SEOProps> = ({
     "@type": ["HomeImprovementBusiness", "LocalBusiness"],
     "name": "Hammer & Hew",
     "alternateName": "Hammer and Hew Deck Construction",
-    "description": "Professional deck construction and restoration services serving the Bay Area for over 15 years",
+    "description": "Professional deck construction and restoration services serving Philadelphia, PA for over 15 years",
     "url": url,
-    "telephone": "(555) 123-4567",
+    "telephone": "(215) 555-4567",
     "email": "info@hammerandhew.com",
     "foundingDate": "2008",
     "logo": `${url}/logo.png`,
@@ -39,30 +39,30 @@ const SEO: React.FC<SEOProps> = ({
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US",
-      "addressRegion": "CA",
-      "addressLocality": "Bay Area",
-      "postalCode": "94105"
+      "addressRegion": "PA",
+      "addressLocality": "Philadelphia",
+      "postalCode": "19107"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 37.7749,
-      "longitude": -122.4194
+      "latitude": 39.9526,
+      "longitude": -75.1652
     },
     "areaServed": [
       {
         "@type": "City",
-        "name": "San Francisco",
-        "containedInPlace": { "@type": "State", "name": "California" }
+        "name": "Philadelphia",
+        "containedInPlace": { "@type": "State", "name": "Pennsylvania" }
       },
       {
         "@type": "City", 
-        "name": "San Jose",
-        "containedInPlace": { "@type": "State", "name": "California" }
+        "name": "Camden",
+        "containedInPlace": { "@type": "State", "name": "New Jersey" }
       },
       {
         "@type": "City",
-        "name": "Palo Alto", 
-        "containedInPlace": { "@type": "State", "name": "California" }
+        "name": "Chester", 
+        "containedInPlace": { "@type": "State", "name": "Pennsylvania" }
       }
     ],
     "serviceType": ["Deck Construction", "Deck Restoration", "Deck Repair", "Deck Staining", "Custom Design"],
@@ -116,7 +116,7 @@ const SEO: React.FC<SEOProps> = ({
         "credentialCategory": "Professional License",
         "recognizedBy": {
           "@type": "Organization",
-          "name": "California State License Board"
+          "name": "Pennsylvania Department of Labor & Industry"
         }
       }
     ],
@@ -172,9 +172,9 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="twitter:image" content={image} />
       
       {/* Local SEO */}
-      <meta name="geo.region" content="US-CA" />
-      <meta name="geo.position" content="37.7749;-122.4194" />
-      <meta name="ICBM" content="37.7749, -122.4194" />
+      <meta name="geo.region" content="US-PA" />
+      <meta name="geo.position" content="39.9526;-75.1652" />
+      <meta name="ICBM" content="39.9526, -75.1652" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
