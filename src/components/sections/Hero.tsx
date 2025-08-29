@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden">
+    <section id="home" className="relative min-h-screen overflow-hidden border-b border-slate-200/20 shadow-sm">
       {/* Hero Background Image */}
       <div className="absolute inset-0">
         <img 
@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
           alt="Professional deck construction" 
           className="w-full h-full object-cover object-bottom"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        <div className="absolute inset-0 bg-slate-900/60"></div>
       </div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
@@ -41,10 +41,10 @@ const Hero: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Transform Your Backyard Into Your Family's 
-                <span className="text-green-400"> Favorite Place</span>
+                <span className="text-emerald-400"> Favorite Place</span>
               </motion.h1>
               
-              <p className="text-xl sm:text-2xl text-gray-200 leading-relaxed mb-8 max-w-2xl">
+              <p className="text-xl sm:text-2xl text-gray-200 leading-relaxed mb-8 max-w-2xl mx-auto text-center">
                 Custom deck construction & restoration that lasts generations. 
                 Professional craftsmanship with premium materials and unmatched warranty.
               </p>
@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
                     key={index} 
                     className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg"
                   >
-                    <IconComponent className="w-5 h-5 text-green-800" />
+                    <IconComponent className="w-5 h-5 text-emerald-600" />
                     <span className="text-sm font-medium text-gray-800">
                       {badge.text}
                     </span>
@@ -78,7 +78,10 @@ const Hero: React.FC = () => {
               >
                 Get Free Estimate
               </button>
-              <button className="btn-secondary text-lg px-8 py-4">
+              <button 
+                className="bg-white text-slate-800 border-2 border-white text-lg px-8 py-4 rounded-lg font-semibold hover:bg-slate-800 hover:text-white transition-colors duration-300 shadow-lg"
+                onClick={() => window.location.href = 'tel:(555)123-4567'}
+              >
                 Call (555) 123-4567
               </button>
             </div>
@@ -94,7 +97,7 @@ const Hero: React.FC = () => {
                 <span className="text-lg font-semibold text-gray-800">4.9/5</span>
               </div>
               <p className="text-sm text-gray-600 text-center">
-                Trusted by <span className="font-semibold text-green-800">500+ Bay Area families</span>
+                Trusted by <span className="font-semibold text-emerald-700">500+ Bay Area families</span>
               </p>
             </div>
           </motion.div>
@@ -102,7 +105,6 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-50/50 to-transparent"></div>
     </section>
   );
 };

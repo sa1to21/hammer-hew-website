@@ -95,7 +95,7 @@ const Process: React.FC = () => {
   ];
 
   return (
-    <section id="process" className="py-20 bg-white">
+    <section id="process" className="py-20 bg-stone-50 border-b border-slate-200/30 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
@@ -194,7 +194,7 @@ const Process: React.FC = () => {
 
         {/* Bottom CTA */}
         <motion.div 
-          className="text-center mt-16 bg-gradient-to-br from-green-800 to-amber-700 rounded-3xl p-8 md:p-12 text-white"
+          className="text-center mt-16 bg-emerald-600 rounded-3xl p-8 md:p-12 text-white shadow-2xl"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}

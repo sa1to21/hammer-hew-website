@@ -2,7 +2,7 @@ import { Suspense, useEffect } from 'react';
 import Layout from './components/layout/Layout';
 import SEO from './components/common/SEO';
 import Hero from './components/sections/Hero';
-import Services from './components/sections/Services';
+import ServicesProcessTabs from './components/sections/ServicesProcessTabs';
 import WhyChooseUs from './components/sections/WhyChooseUs';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 import { LazyGallery, LazyProcess, LazyContact, LazyBeforeAfterGallery, LazyTestimonials } from './utils/lazyLoading';
@@ -23,13 +23,12 @@ function App() {
       <SEO />
       <Layout>
         <Hero />
-        <Services />
         <WhyChooseUs />
         <Suspense fallback={<LoadingSpinner />}>
           <LazyGallery />
-          <LazyBeforeAfterGallery />
           <LazyTestimonials />
-          <LazyProcess />
+          <ServicesProcessTabs />
+          {/* <LazyBeforeAfterGallery /> */}
           <LazyContact />
         </Suspense>
       </Layout>

@@ -1,32 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Award, Users, Clock, Wrench, Star, CheckCircle, TrendingUp } from 'lucide-react';
+import { Shield, Award, Users, Clock, Wrench, Star, CheckCircle, TrendingUp, FileText } from 'lucide-react';
 
 const WhyChooseUs: React.FC = () => {
   const mainBenefits = [
     {
       icon: Shield,
       title: "Licensed & Insured",
-      description: "Fully licensed contractor with $2M liability insurance. Licensed #XXXXXX",
-      color: "text-green-600"
+      description: "Fully licensed contractor with $2M liability insurance. Licensed #XXXXXX"
     },
     {
       icon: Award,
       title: "10-Year Warranty",
-      description: "Industry-leading warranty on all structural work. We stand behind our craftsmanship.",
-      color: "text-blue-600"
+      description: "Industry-leading warranty on all structural work. We stand behind our craftsmanship."
     },
     {
-      icon: Users,
-      title: "500+ Happy Customers",
-      description: "Trusted by Bay Area families for over 15 years. 4.9/5 star rating.",
-      color: "text-amber-600"
+      icon: FileText,
+      title: "Free Detailed Estimates",
+      description: "No hidden fees. Itemized quotes with material costs."
     },
     {
-      icon: Clock,
-      title: "On-Time Delivery",
-      description: "98% of projects completed on schedule. Clear timelines and daily updates.",
-      color: "text-purple-600"
+      icon: Wrench,
+      title: "Premium Materials Only",
+      description: "Cedar, Redwood, and top-grade composite materials."
     }
   ];
 
@@ -46,7 +42,7 @@ const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section id="why-choose-us" className="py-20 bg-white">
+    <section id="why-choose-us" className="py-20 bg-stone-50 border-b border-slate-200/30 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
@@ -78,8 +74,8 @@ const WhyChooseUs: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className={`inline-flex items-center justify-center w-16 h-16 ${benefit.color} bg-current bg-opacity-10 rounded-2xl mb-4 group-hover:bg-opacity-20 transition-colors duration-300`}>
-                  <IconComponent className={`w-8 h-8 ${benefit.color}`} />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-600 rounded-2xl mb-4 shadow-lg group-hover:bg-emerald-700 transition-colors duration-300">
+                  <IconComponent className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-heading font-semibold text-gray-800 mb-2">
                   {benefit.title}
@@ -94,14 +90,14 @@ const WhyChooseUs: React.FC = () => {
 
         {/* Stats Section */}
         <motion.div 
-          className="bg-gradient-to-br from-green-800 to-amber-700 rounded-3xl p-8 md:p-12 text-white mb-16"
+          className="bg-slate-800 rounded-3xl p-8 md:p-12 text-white mb-16 shadow-2xl"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-heading font-bold mb-4">
+            <h3 className="text-3xl font-heading font-bold mb-4 text-white">
               Our Track Record Speaks for Itself
             </h3>
             <p className="text-green-100 text-lg">
@@ -131,8 +127,9 @@ const WhyChooseUs: React.FC = () => {
         </motion.div>
 
         {/* Two Column Layout */}
+        {/* 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Process Highlights */}
+          // Left - Process Highlights
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -173,7 +170,7 @@ const WhyChooseUs: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Right - Certifications */}
+          // Right - Certifications
           <motion.div
             className="bg-gray-50 rounded-2xl p-8"
             initial={{ opacity: 0, x: 30 }}
@@ -209,6 +206,7 @@ const WhyChooseUs: React.FC = () => {
             </div>
           </motion.div>
         </div>
+        */}
       </div>
     </section>
   );

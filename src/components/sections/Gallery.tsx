@@ -70,15 +70,6 @@ const Gallery: React.FC = () => {
       description: "Premium restoration work showcasing our commitment to excellence",
       imageUrl: "/images/gallery/restoration/restoration-004.jpg",
       tags: ["Premium", "Excellence", "Commitment"]
-    },
-    {
-      id: 7,
-      title: "Beautiful Deck Revival",
-      category: "restoration",
-      location: "Bay Area, CA",
-      description: "Complete deck revival with professional techniques and quality materials",
-      imageUrl: "/images/gallery/restoration/restoration-005.jpg",
-      tags: ["Revival", "Professional", "Beautiful"]
     }
   ];
 
@@ -94,7 +85,7 @@ const Gallery: React.FC = () => {
     : galleryItems.filter(item => item.category === activeFilter);
 
   return (
-    <section id="gallery" className="py-20 bg-gray-50">
+    <section id="gallery" className="py-20 bg-white border-b border-slate-200/30 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
@@ -105,7 +96,7 @@ const Gallery: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl sm:text-5xl font-heading text-gray-800 mb-6">
-            Our <span className="text-green-800">Work</span>
+            Our <span className="text-emerald-600">Work</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Every deck tells a story. Here are some of our recent transformations 
@@ -127,8 +118,8 @@ const Gallery: React.FC = () => {
               onClick={() => setActiveFilter(category.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeFilter === category.id
-                  ? 'bg-green-800 text-white shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-gray-100 shadow-sm'
+                  ? 'bg-emerald-600 text-white shadow-lg'
+                  : 'bg-white text-gray-600 hover:bg-stone-100 shadow-sm'
               }`}
             >
               <span className="flex items-center space-x-1">
@@ -179,7 +170,7 @@ const Gallery: React.FC = () => {
                 <h3 className="text-xl font-heading font-semibold text-gray-800 mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-green-800 font-medium mb-2">
+                <p className="text-sm text-emerald-600 font-medium mb-2">
                   {item.location}
                 </p>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">

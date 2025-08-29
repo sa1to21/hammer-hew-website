@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Hammer & Hew** - Professional deck construction and restoration services website for Bay Area contractors. Built as a high-converting lead generation website with modern React stack.
 
-**Current Status**: 🟢 ЭТАП 3 COMPLETE - Full-featured website ready for production
+**Current Status**: 🟢 ЭТАП 5 COMPLETE - Production-ready website with real photos, optimized UX, and unified Services+Process tabs
 
 ## Development Commands
 
@@ -46,42 +46,61 @@ npm run lint
 ```
 hammer-hew-website/
 ├── public/
-│   └── logo.png                 # Company logo
+│   ├── logo.png                           # Company logo
+│   └── images/
+│       ├── hero/main.jpg                  # Hero background image
+│       └── gallery/                       # Real project photos
+│           ├── new-construction/
+│           │   ├── new-001.jpg
+│           │   └── new-002.jpg
+│           └── restoration/
+│               ├── restoration-001.jpg
+│               ├── restoration-002.jpg
+│               ├── restoration-003.jpg
+│               └── restoration-004.jpg
 ├── src/
 │   ├── components/
 │   │   ├── layout/
-│   │   │   ├── Header.tsx       # Navigation with mobile menu
-│   │   │   ├── Footer.tsx       # Contact info & trust elements
-│   │   │   └── Layout.tsx       # Main page wrapper
+│   │   │   ├── Header.tsx               # Dynamic floating navigation + social media
+│   │   │   ├── Footer.tsx               # Contact info & trust elements
+│   │   │   └── Layout.tsx               # Main page wrapper
 │   │   ├── sections/
-│   │   │   ├── Hero.tsx         # Main landing section with form
-│   │   │   ├── Services.tsx     # 4 service cards with pricing
-│   │   │   ├── WhyChooseUs.tsx  # Trust & credibility section
-│   │   │   ├── Gallery.tsx      # Project portfolio (6 items)
-│   │   │   ├── Process.tsx      # 5-step timeline process
-│   │   │   └── Contact.tsx      # Contact forms & business info
+│   │   │   ├── Hero.tsx                 # Centered hero without form
+│   │   │   ├── WhyChooseUs.tsx          # 4 key benefits + stats (bottom sections commented)
+│   │   │   ├── Gallery.tsx              # 6 real project photos with filtering
+│   │   │   ├── Testimonials.tsx         # Customer reviews + stats
+│   │   │   ├── ServicesProcessTabs.tsx  # Combined Services+Process with tabs
+│   │   │   ├── Contact.tsx              # Main contact form + business info
+│   │   │   ├── Services.tsx             # (Legacy - not used)
+│   │   │   ├── Process.tsx              # (Legacy - not used)
+│   │   │   └── BeforeAfterGallery.tsx   # (Hidden - can be re-enabled)
 │   │   ├── ui/
-│   │   │   ├── ContactForm.tsx  # Main lead capture form
-│   │   │   └── ServiceCard.tsx  # Reusable service cards
+│   │   │   ├── MainContactForm.tsx      # Main lead capture form
+│   │   │   ├── ServiceCard.tsx          # Compact service cards
+│   │   │   ├── ContactForm.tsx          # (Legacy form component)
+│   │   │   └── AnimatedCard.tsx         # Animation wrapper
 │   │   └── common/
-│   │       ├── SEO.tsx          # Meta tags & structured data
+│   │       ├── SEO.tsx                  # Meta tags & structured data
 │   │       └── HelmetProvider.tsx
 │   ├── utils/
-│   │   └── formConfig.ts        # Formspree integration config
-│   └── App.tsx                  # Main app with all sections
-├── FORMSPREE_SETUP.md          # Email integration instructions
-└── development_plan.md         # Original development roadmap
+│   │   ├── formConfig.ts                # Formspree integration config
+│   │   └── lazyLoading.ts               # Component lazy loading
+│   └── App.tsx                          # Main app with reordered sections
+├── FORMSPREE_SETUP.md                   # Email integration instructions
+├── SEO_OPTIMIZATION_PLAN.md             # SEO improvement roadmap
+└── development_plan.md                  # Development history & roadmap
 ```
 
 ## Design System
 
-### Colors (Standard Tailwind)
-- **Primary Green**: `green-800` (#166534) - Navigation, CTAs, accents
-- **Secondary Brown**: `amber-700` (#B45309) - Hover states, gradients  
-- **Gold Accent**: `yellow-500` (#EAB308) - Stars, highlights
-- **Success**: `green-600` (#16A34A) - CTA buttons
-- **Text**: `gray-800` (#1F2937) - Primary text
-- **Background**: `gray-50` (#F9FAFB) - Section backgrounds
+### Colors (Updated Scheme)
+- **Primary Emerald**: `emerald-600` (#059669) - Icons, CTAs, accents
+- **Primary Slate**: `slate-800` (#1e293b) - CTA cards, navigation text
+- **Secondary Amber**: `amber-600` (#d97706) - Popular badges, step numbers  
+- **Success**: `emerald-600` (#059669) - Primary buttons
+- **Text**: `slate-700` (#334155) - Primary text, navigation
+- **Light Text**: `slate-300` (#cbd5e1) - Secondary text on dark backgrounds
+- **Background**: `white` / `stone-50` (#fafaf9) - Alternating section backgrounds
 
 ### Typography
 - **Headlines**: Playfair Display (Google Fonts) - `font-heading`
@@ -90,7 +109,7 @@ hammer-hew-website/
 
 ### Component Classes
 ```css
-.btn-primary    # Green CTA button with hover effects
+.btn-primary    # Emerald CTA button with hover effects
 .btn-secondary  # Outlined button that fills on hover
 ```
 
@@ -98,41 +117,42 @@ hammer-hew-website/
 
 **Current Page Flow:**
 ```
-Hero → Services → Why Choose Us → Gallery → Process → Contact
+Hero → Why Choose Us → Gallery → Reviews → Services & Process (Tabs) → Contact
 ```
 
 ### Section Details:
 
 **1. Hero Section**
-- Dual-column layout with form on right
+- Centered single-column layout (form moved to Contact)
 - Trust badges (15+ Years, Licensed, Warranty)
-- Animated content with Framer Motion
-- Main lead capture form
+- Background image with overlay
+- Call-to-action buttons redirecting to contact form
 
-**2. Services Section**  
-- 4 service cards with pricing
-- New Construction ($15,000+) marked as "Most Popular"
-- Hover effects and responsive grid
+**2. Why Choose Us**
+- 4 key benefits with emerald icons (Licensed, Warranty, Free Estimates, Premium Materials)
+- Dark statistics block (500+ decks, 4.9★ rating)
+- Bottom sections commented out (can be re-enabled)
 
-**3. Why Choose Us**
-- Statistics block (500+ decks, 4.9★ rating)
-- Certifications and credentials
-- Customer testimonial with rating
+**3. Gallery**
+- 6 real project photos (2 new-construction, 4 restoration)
+- Category filtering with project counts
+- Real image paths to uploaded photos
 
-**4. Gallery**
-- 6 project examples with filter categories
-- Placeholder images (via placeholder.com)
-- Tags and project details
+**4. Reviews (Testimonials)**
+- Customer testimonials carousel
+- Statistics with animated counters
+- CTA for consultation booking
 
-**5. Process**
-- 5-step timeline (Consultation → Design → Permits → Construction → Inspection)
-- Alternating layout with detailed steps
-- Duration estimates for each phase
+**5. Services & Process (Tabs)**
+- Combined tabbed interface: "What We Do" | "How We Work"
+- Services: 4 compact cards without pricing
+- Process: 5 card-based steps with arrows
+- Unified CTA at bottom with slate-800 styling
 
 **6. Contact**
+- Main contact form (moved from Hero)
 - Multiple contact methods
-- Business hours and emergency services
-- Additional quick contact form
+- Business hours and service area info
 
 ## Development Progress Status
 
@@ -157,17 +177,29 @@ Hero → Services → Why Choose Us → Gallery → Process → Contact
 - Formspree integration ready (demo mode active)
 - Smooth animations throughout with Framer Motion
 
-### 🔄 NEXT - ЭТАП 4: Polish & Performance
-- Performance optimization and code splitting
-- Advanced animations and micro-interactions  
-- Cross-device testing and refinements
-- Final SEO optimizations
+### ✅ COMPLETED - ЭТАП 4: Real Content Integration
+- Real project photos integrated (replaced placeholders)
+- Image organization and management system
+- Gallery updated with authentic project images
+- BeforeAfterGallery component created (currently hidden)
 
-### 🔄 FUTURE - ÉTАП 5: Advanced Features
-- Before/After gallery with image comparison sliders
-- Customer testimonials carousel
+### ✅ COMPLETED - ЭТАП 5: UX & Design Optimization
+- Form moved from Hero to Contact for better UX flow
+- All CTAs unified to redirect to main contact form
+- Services pricing removed (consultation-based approach)
+- Complete design system overhaul:
+  - Updated color scheme (emerald/slate/amber)
+  - Removed problematic gradients
+  - Floating header with dynamic logo sizing
+- Services+Process combined into tabbed interface
+- Section reordering for better user journey
+- Spacing optimization throughout the site
+
+### 🔄 NEXT - ЭТАП 6: Advanced Features & Polish
+- Before/After gallery (toggle hidden component)
 - Google Maps integration for service area
 - A/B testing setup for headlines and CTAs
+- Performance optimization and code splitting
 
 ## Key Features Implemented
 
