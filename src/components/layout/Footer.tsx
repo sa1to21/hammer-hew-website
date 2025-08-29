@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             <img 
               src="/logo.png" 
               alt="Hammer & Hew" 
-              className="h-12 w-auto mb-4 brightness-0 invert"
+              className="h-25 w-auto mb-4"
             />
             <p className="text-gray-300 mb-4">
               Professional deck construction and restoration services. 
@@ -32,19 +32,19 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-heading text-lg font-semibold mb-4">Contact Us</h3>
+            <h3 className="font-heading text-lg font-semibold mb-4 text-white">Contact Us</h3>
             <div className="space-y-3">
-              <a href="tel:(555)123-4567" className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
+              <a href="tel:(917)250-2222" className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>(555) 123-4567</span>
+                <span>(917) 250-2222</span>
               </a>
-              <a href="mailto:info@hammerandhew.com" className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
+              <a href="mailto:hammerandhewllc@gmail.com" className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
                 <Mail className="w-4 h-4" />
-                <span>info@hammerandhew.com</span>
+                <span>hammerandhewllc@gmail.com</span>
               </a>
               <div className="flex items-start space-x-3 text-gray-300">
                 <MapPin className="w-4 h-4 mt-1" />
-                <span>Bay Area, California</span>
+                <span>Philadelphia, Pennsylvania</span>
               </div>
               <div className="flex items-start space-x-3 text-gray-300">
                 <Clock className="w-4 h-4 mt-1" />
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-heading text-lg font-semibold mb-4">Our Services</h3>
+            <h3 className="font-heading text-lg font-semibold mb-4 text-white">Our Services</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">New Deck Construction</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Deck Restoration</a></li>
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
 
           {/* Reviews & Trust */}
           <div>
-            <h3 className="font-heading text-lg font-semibold mb-4">Trusted Service</h3>
+            <h3 className="font-heading text-lg font-semibold mb-4 text-white">Trusted Service</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <div className="flex">

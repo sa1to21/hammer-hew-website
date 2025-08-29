@@ -78,9 +78,9 @@ const Hero: React.FC = () => {
               </button>
               <button 
                 className="bg-white text-slate-800 border-2 border-white text-lg px-8 py-4 rounded-lg font-semibold hover:bg-slate-800 hover:text-white transition-colors duration-300 shadow-lg"
-                onClick={() => window.location.href = 'tel:(555)123-4567'}
+                onClick={() => window.location.href = 'tel:(917)250-2222'}
               >
-                Call (555) 123-4567
+                Call (917) 250-2222
               </button>
             </div>
 
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
                 <span className="text-lg font-semibold text-gray-800">4.9/5</span>
               </div>
               <p className="text-sm text-gray-600 text-center">
-                Trusted by <span className="font-semibold text-emerald-700">500+ Bay Area families</span>
+                Trusted by <span className="font-semibold text-emerald-700">500+ Philadelphia families</span>
               </p>
             </div>
           </motion.div>

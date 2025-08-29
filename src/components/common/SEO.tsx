@@ -12,9 +12,9 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Deck Construction & Restoration Services | Hammer & Hew | Philadelphia",
-  description = "Professional deck construction, restoration & repair in Philadelphia, PA. Licensed & insured with 10-year warranty. Free estimates. Call (215) 555-4567",
-  keywords = "deck construction, deck restoration, deck repair, Philadelphia, Pennsylvania, licensed contractor, deck builder",
+  title = "Professional Deck Construction & Restoration | Philadelphia, PA | Hammer & Hew LLC",
+  description = "Expert deck construction, restoration & repair services in Philadelphia, PA. Licensed & insured contractor with 15+ years experience. 10-year warranty. Free estimates. Call (917) 250-2222 - hammerandhewllc@gmail.com",
+  keywords = "deck construction Philadelphia, deck restoration PA, deck builder Pennsylvania, outdoor decking contractor, custom deck construction, deck repair services, licensed deck contractor Philadelphia, composite decking, wood deck restoration"
   image = "/og-image.jpg",
   url = "https://hammerandhew.com",
   type = "website",
@@ -23,12 +23,12 @@ const SEO: React.FC<SEOProps> = ({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": ["HomeImprovementBusiness", "LocalBusiness"],
-    "name": "Hammer & Hew",
-    "alternateName": "Hammer and Hew Deck Construction",
-    "description": "Professional deck construction and restoration services serving Philadelphia, PA for over 15 years",
+    "name": "Hammer & Hew LLC",
+    "alternateName": "Hammer and Hew Deck Construction Company",
+    "description": "Professional deck construction and restoration services serving Philadelphia, PA metro area for over 15 years. Licensed contractor specializing in custom decks, restoration, and outdoor living spaces.",
     "url": url,
-    "telephone": "(215) 555-4567",
-    "email": "info@hammerandhew.com",
+    "telephone": "(917) 250-2222",
+    "email": "hammerandhewllc@gmail.com",
     "foundingDate": "2008",
     "logo": `${url}/logo.png`,
     "image": [
@@ -84,7 +84,7 @@ const SEO: React.FC<SEOProps> = ({
         }
       }
     ],
-    "priceRange": "$1,500 - $50,000+",
+    "priceRange": "$2,000 - $60,000+",
     "paymentAccepted": ["Cash", "Credit Card", "Check", "Financing"],
     "currenciesAccepted": "USD",
     "openingHours": "Mo-Sa 07:00-18:00",
@@ -93,7 +93,7 @@ const SEO: React.FC<SEOProps> = ({
       "ratingValue": "4.9",
       "bestRating": "5",
       "worstRating": "1",
-      "reviewCount": "150"
+      "reviewCount": "200"
     },
     "review": [
       {

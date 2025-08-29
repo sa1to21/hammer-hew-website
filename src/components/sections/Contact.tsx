@@ -7,16 +7,16 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: "Call Us",
-      primary: "(215) 555-4567",
+      primary: "(917) 250-2222",
       secondary: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
-      action: "tel:(215)555-4567",
+      action: "tel:(917)250-2222",
     },
     {
       icon: Mail,
       title: "Email Us",
-      primary: "info@hammerandhew.com",
+      primary: "hammerandhewllc@gmail.com",
       secondary: "We respond within 2 hours",
-      action: "mailto:info@hammerandhew.com",
+      action: "mailto:hammerandhewllc@gmail.com",
     },
     {
       icon: MapPin,

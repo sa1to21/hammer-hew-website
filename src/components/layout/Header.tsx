@@ -15,10 +15,9 @@ const Header: React.FC = () => {
   }, []);
 
   const navigation = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Reviews', href: '#testimonials' },
+    { name: 'Services', href: '#services' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -34,14 +33,19 @@ const Header: React.FC = () => {
         }`}>
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img 
-              src="/logo.png" 
-              alt="Hammer & Hew" 
-              className="w-auto transition-all duration-300"
-              style={{
-                height: isScrolled ? '70px' : '110px'
-              }}
-            />
+            <a 
+              href="#why-choose-us"
+              className="block"
+            >
+              <img 
+                src="/logo.png" 
+                alt="Hammer & Hew" 
+                className="w-auto transition-all duration-300 hover:opacity-80"
+                style={{
+                  height: isScrolled ? '70px' : '110px'
+                }}
+              />
+            </a>
           </div>
 
           {/* Centered Navigation */}
@@ -74,11 +78,11 @@ const Header: React.FC = () => {
             
             {/* Phone */}
             <a 
-              href="tel:(215)555-4567" 
+              href="tel:(917)250-2222" 
               className="flex items-center space-x-2 text-slate-700 hover:text-emerald-600 transition-colors font-medium"
             >
               <Phone className="w-4 h-4" />
-              <span>(215) 555-4567</span>
+              <span>(917) 250-2222</span>
             </a>
             
             {/* Social Icons */}
@@ -103,7 +107,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden ml-auto">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-slate-700 hover:text-emerald-600"
@@ -132,10 +136,10 @@ const Header: React.FC = () => {
                 {item.name}
               </a>
             ))}
-            <div className="pt-4 border-t border-gray-200 mt-4">
+            <div className="pt-4 border-t border-gray-200 mt-4 px-3">
               {/* CTA Button */}
               <button 
-                className="btn-primary w-full mx-3 mb-4"
+                className="btn-primary w-full mb-4"
                 onClick={() => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   setIsMenuOpen(false);
@@ -146,11 +150,11 @@ const Header: React.FC = () => {
               
               {/* Phone */}
               <a 
-                href="tel:(215)555-4567" 
-                className="flex items-center space-x-2 px-3 py-2 text-slate-700 hover:text-emerald-600 font-medium"
+                href="tel:(917)250-2222" 
+                className="flex items-center justify-center space-x-2 py-2 text-slate-700 hover:text-emerald-600 font-medium"
               >
                 <Phone className="w-4 h-4" />
-                <span>(215) 555-4567</span>
+                <span>(917) 250-2222</span>
               </a>
               
               {/* Social Icons */}

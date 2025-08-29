@@ -10,14 +10,14 @@ const FloatingActionButton: React.FC = () => {
       icon: Phone,
       label: 'Call Now',
       color: 'bg-green-600 hover:bg-green-700',
-      href: 'tel:(555)123-4567',
+      href: 'tel:(917)250-2222',
       delay: 0.1
     },
     {
       icon: MessageCircle,
       label: 'Text Us',
       color: 'bg-blue-600 hover:bg-blue-700',
-      href: 'sms:(555)123-4567',
+      href: 'sms:(917)250-2222',
       delay: 0.2
     },
     {

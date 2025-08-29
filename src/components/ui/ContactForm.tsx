@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
       
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('Sorry, there was an error. Please try calling us directly at (215) 555-4567.');
+      alert('Sorry, there was an error. Please try calling us directly at (917) 250-2222.');
     }
   };
 
