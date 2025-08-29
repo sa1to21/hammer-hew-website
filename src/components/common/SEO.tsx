@@ -14,7 +14,7 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
   title = "Professional Deck Construction & Restoration | Philadelphia, PA | Hammer & Hew LLC",
   description = "Expert deck construction, restoration & repair services in Philadelphia, PA. Licensed & insured contractor with 15+ years experience. 10-year warranty. Free estimates. Call (917) 250-2222 - hammerandhewllc@gmail.com",
-  keywords = "deck construction Philadelphia, deck restoration PA, deck builder Pennsylvania, outdoor decking contractor, custom deck construction, deck repair services, licensed deck contractor Philadelphia, composite decking, wood deck restoration"
+  keywords = "deck construction Philadelphia, deck restoration PA, deck builder Pennsylvania, outdoor decking contractor, custom deck construction, deck repair services, licensed deck contractor Philadelphia, composite decking, wood deck restoration",
   image = "/og-image.jpg",
   url = "https://hammerandhew.com",
   type = "website",
