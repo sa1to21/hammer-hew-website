@@ -7,22 +7,22 @@ const Header: React.FC = () => {
   const navigation = [
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
+    { name: 'Why Choose Us', href: '#why-choose-us' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Process', href: '#process' },
-    { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
               src="/logo.png" 
               alt="Hammer & Hew" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 
@@ -50,7 +50,12 @@ const Header: React.FC = () => {
               <Phone className="w-4 h-4" />
               <span>(555) 123-4567</span>
             </a>
-            <button className="btn-primary">
+            <button 
+              className="btn-primary"
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Free Estimate
             </button>
           </div>
@@ -93,7 +98,13 @@ const Header: React.FC = () => {
                 <Phone className="w-4 h-4" />
                 <span>(555) 123-4567</span>
               </a>
-              <button className="btn-primary w-full mx-3 mt-2">
+              <button 
+                className="btn-primary w-full mx-3 mt-2"
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsMenuOpen(false);
+                }}
+              >
                 Free Estimate
               </button>
             </div>

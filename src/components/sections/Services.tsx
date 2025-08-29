@@ -10,7 +10,6 @@ const Services: React.FC = () => {
       icon: Hammer,
       title: "New Deck Construction",
       description: "Custom decks built to last generations with premium materials and expert craftsmanship.",
-      startingPrice: "$15,000",
       features: [
         "Design consultation & 3D visualization",
         "Premium materials: Cedar, Redwood, Composite",
@@ -24,7 +23,6 @@ const Services: React.FC = () => {
       icon: RotateCcw,
       title: "Deck Restoration",
       description: "Breathe new life into your existing deck with our complete restoration services.",
-      startingPrice: "$3,500",
       features: [
         "Professional assessment & quote",
         "Power washing & surface prep",
@@ -37,7 +35,6 @@ const Services: React.FC = () => {
       icon: Paintbrush,
       title: "Staining & Sealing",
       description: "Protect and beautify your deck with premium finishes that enhance natural wood beauty.",
-      startingPrice: "$1,500",
       features: [
         "Surface preparation & cleaning",
         "Premium stain & sealant products",
@@ -50,7 +47,6 @@ const Services: React.FC = () => {
       icon: PenTool,
       title: "Custom Design",
       description: "3D design and consultation services to plan your perfect outdoor living space.",
-      startingPrice: "$500",
       features: [
         "Site measurement & analysis",
         "3D renderings & plans",
@@ -89,7 +85,6 @@ const Services: React.FC = () => {
                 icon={service.icon}
                 title={service.title}
                 description={service.description}
-                startingPrice={service.startingPrice}
                 features={service.features}
                 popular={service.popular}
               />
@@ -107,7 +102,12 @@ const Services: React.FC = () => {
               Our experts will assess your deck and recommend the best solution for your needs and budget.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary">
+              <button 
+                className="btn-primary"
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Schedule Free Consultation
               </button>
               <button className="btn-secondary">

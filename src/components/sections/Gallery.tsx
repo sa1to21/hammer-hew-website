@@ -15,61 +15,70 @@ interface GalleryItem {
 const Gallery: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
-  // Temporary placeholder data - in real app, these would be actual project images
+  // Real project images from uploaded photos
   const galleryItems: GalleryItem[] = [
     {
       id: 1,
       title: "Modern Composite Deck",
       category: "new-construction",
-      location: "Palo Alto, CA",
-      description: "Custom 400 sq ft composite deck with built-in seating and lighting",
-      imageUrl: "https://via.placeholder.com/400x300/2D5016/FFFFFF?text=Modern+Composite+Deck",
-      tags: ["Composite", "Modern", "Lighting"]
+      location: "Bay Area, CA",
+      description: "Custom composite deck construction with premium materials and expert craftsmanship",
+      imageUrl: "/images/gallery/new-construction/new-001.jpg",
+      tags: ["Composite", "Modern", "New Construction"]
     },
     {
       id: 2,
-      title: "Cedar Deck Restoration",
-      category: "restoration",
-      location: "San Jose, CA",
-      description: "Complete restoration of 20-year old cedar deck with new staining",
-      imageUrl: "https://via.placeholder.com/400x300/8B4513/FFFFFF?text=Cedar+Restoration",
-      tags: ["Cedar", "Restoration", "Staining"]
+      title: "Elegant New Construction",
+      category: "new-construction", 
+      location: "Bay Area, CA",
+      description: "Beautiful new deck build with attention to detail and quality materials",
+      imageUrl: "/images/gallery/new-construction/new-002.jpg",
+      tags: ["New Build", "Elegant", "Quality"]
     },
     {
       id: 3,
-      title: "Multi-Level Redwood Deck",
-      category: "new-construction",
-      location: "Mountain View, CA",
-      description: "Two-level redwood deck with pergola and outdoor kitchen prep area",
-      imageUrl: "https://via.placeholder.com/400x300/A0522D/FFFFFF?text=Multi-Level+Redwood",
-      tags: ["Redwood", "Multi-Level", "Pergola"]
+      title: "Professional Deck Restoration",
+      category: "restoration",
+      location: "Bay Area, CA", 
+      description: "Complete deck restoration bringing new life to weathered decking",
+      imageUrl: "/images/gallery/restoration/restoration-001.jpg",
+      tags: ["Restoration", "Professional", "Renewal"]
     },
     {
       id: 4,
-      title: "Deck Staining Project",
-      category: "staining",
-      location: "Fremont, CA",
-      description: "Premium semi-transparent stain application on existing deck",
-      imageUrl: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Staining+Project",
-      tags: ["Staining", "Maintenance", "Protection"]
+      title: "Expert Deck Renovation",
+      category: "restoration",
+      location: "Bay Area, CA",
+      description: "Skillful restoration work transforming old decks into beautiful spaces",
+      imageUrl: "/images/gallery/restoration/restoration-002.jpg",
+      tags: ["Renovation", "Expert", "Transformation"]
     },
     {
       id: 5,
-      title: "Composite Deck with Privacy Screen",
-      category: "new-construction",
-      location: "Sunnyvale, CA",
-      description: "Low-maintenance composite deck with integrated privacy screening",
-      imageUrl: "https://via.placeholder.com/400x300/2D5016/FFFFFF?text=Privacy+Screen+Deck",
-      tags: ["Composite", "Privacy", "Low-Maintenance"]
+      title: "Quality Deck Restoration",
+      category: "restoration",
+      location: "Bay Area, CA",
+      description: "High-quality restoration services with lasting results",
+      imageUrl: "/images/gallery/restoration/restoration-003.jpg",
+      tags: ["Quality", "Restoration", "Lasting"]
     },
     {
       id: 6,
-      title: "Weathered Deck Revival",
+      title: "Premium Deck Restoration",
       category: "restoration",
-      location: "Santa Clara, CA",
-      description: "Complete deck rehabilitation from weathered to wonderful",
-      imageUrl: "https://via.placeholder.com/400x300/8B4513/FFFFFF?text=Deck+Revival",
-      tags: ["Restoration", "Weathered", "Revival"]
+      location: "Bay Area, CA",
+      description: "Premium restoration work showcasing our commitment to excellence",
+      imageUrl: "/images/gallery/restoration/restoration-004.jpg",
+      tags: ["Premium", "Excellence", "Commitment"]
+    },
+    {
+      id: 7,
+      title: "Beautiful Deck Revival",
+      category: "restoration",
+      location: "Bay Area, CA",
+      description: "Complete deck revival with professional techniques and quality materials",
+      imageUrl: "/images/gallery/restoration/restoration-005.jpg",
+      tags: ["Revival", "Professional", "Beautiful"]
     }
   ];
 
@@ -85,7 +94,7 @@ const Gallery: React.FC = () => {
     : galleryItems.filter(item => item.category === activeFilter);
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="gallery" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 

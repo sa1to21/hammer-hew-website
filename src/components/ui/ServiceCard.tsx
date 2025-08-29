@@ -5,7 +5,6 @@ interface ServiceCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
-  startingPrice: string;
   features: string[];
   ctaText?: string;
   popular?: boolean;
@@ -15,9 +14,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   icon: Icon,
   title,
   description,
-  startingPrice,
   features,
-  ctaText = "Get Quote",
+  ctaText = "Get Free Estimate",
   popular = false,
 }) => {
   return (
@@ -60,22 +58,18 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </ul>
       </div>
 
-      {/* Price and CTA */}
-      <div className="mt-auto pt-6 border-t border-gray-100">
-        <div className="flex items-center justify-between mb-4">
-          <div>
-            <span className="text-sm text-gray-500">Starting from</span>
-            <div className="text-2xl font-bold text-gray-800">
-              {startingPrice}
-            </div>
-          </div>
-        </div>
-        
-        <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-          popular 
-            ? 'bg-green-800 text-white hover:bg-amber-700' 
-            : 'bg-gray-50 text-gray-800 hover:bg-green-800 hover:text-white border border-gray-200 hover:border-green-800'
-        }`}>
+      {/* CTA */}
+      <div className="mt-auto pt-6">
+        <button 
+          className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+            popular 
+              ? 'bg-green-800 text-white hover:bg-amber-700' 
+              : 'bg-gray-50 text-gray-800 hover:bg-green-800 hover:text-white border border-gray-200 hover:border-green-800'
+          }`}
+          onClick={() => {
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
           {ctaText}
         </button>
       </div>

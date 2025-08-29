@@ -21,53 +21,53 @@ const BeforeAfterGallery: React.FC = () => {
     {
       id: 1,
       title: "Complete Deck Restoration",
-      location: "San Francisco, CA",
-      description: "20-year old cedar deck completely restored with new staining and board replacement",
-      beforeImage: "https://via.placeholder.com/600x400/8B4513/FFFFFF?text=Weathered+Cedar+Deck",
-      afterImage: "https://via.placeholder.com/600x400/D2691E/FFFFFF?text=Restored+Cedar+Deck",
+      location: "Bay Area, CA",
+      description: "Professional deck restoration bringing new life to weathered decking with expert craftsmanship",
+      beforeImage: "/images/before-after/restoration/restoration-001-before.jpg",
+      afterImage: "/images/before-after/restoration/restoration-001-after.jpg",
       category: "restoration",
       year: "2024",
-      materials: ["Cedar", "Premium Stain", "Weather Seal"]
+      materials: ["Premium Stain", "Weather Seal", "Board Replacement"]
     },
     {
       id: 2,
-      title: "Modern Composite Upgrade",
-      location: "Palo Alto, CA", 
-      description: "Old wooden deck replaced with modern composite materials and LED lighting",
-      beforeImage: "https://via.placeholder.com/600x400/654321/FFFFFF?text=Old+Wood+Deck",
-      afterImage: "https://via.placeholder.com/600x400/2D5016/FFFFFF?text=Modern+Composite",
+      title: "Deck Construction Project",
+      location: "Bay Area, CA", 
+      description: "Complete deck transformation from old structure to modern outdoor living space",
+      beforeImage: "/images/before-after/construction/construction-001-before.jpg",
+      afterImage: "/images/before-after/construction/construction-001-after.jpg",
       category: "upgrade",
       year: "2024",
-      materials: ["Composite", "LED Lighting", "Glass Rails"]
+      materials: ["Quality Materials", "Professional Installation", "Modern Design"]
     },
     {
       id: 3,
-      title: "Multi-Level Expansion",
-      location: "San Jose, CA",
-      description: "Single-level deck expanded into beautiful multi-level outdoor living space",
-      beforeImage: "https://via.placeholder.com/600x400/696969/FFFFFF?text=Single+Level",
-      afterImage: "https://via.placeholder.com/600x400/228B22/FFFFFF?text=Multi-Level+Space",
-      category: "expansion",
+      title: "Expert Deck Renovation",
+      location: "Bay Area, CA",
+      description: "Skillful restoration work transforming weathered decks into beautiful outdoor spaces",
+      beforeImage: "/images/before-after/restoration/restoration-002-before.jpg",
+      afterImage: "/images/before-after/restoration/restoration-002-after.jpg",
+      category: "restoration",
       year: "2024", 
-      materials: ["Redwood", "Stone Accents", "Built-in Seating"]
+      materials: ["Cedar Restoration", "Premium Finish", "Professional Sealing"]
     },
     {
       id: 4,
-      title: "Luxury Resort Style",
-      location: "Mountain View, CA",
-      description: "Basic deck transformed into luxury resort-style outdoor entertainment area",
-      beforeImage: "https://via.placeholder.com/600x400/A0522D/FFFFFF?text=Basic+Deck",
-      afterImage: "https://via.placeholder.com/600x400/DAA520/FFFFFF?text=Luxury+Resort+Style",
-      category: "luxury",
+      title: "Quality Deck Revival",
+      location: "Bay Area, CA",
+      description: "High-quality restoration services with lasting results and attention to detail",
+      beforeImage: "/images/before-after/restoration/restoration-003-before.jpg",
+      afterImage: "/images/before-after/restoration/restoration-003-after.jpg",
+      category: "restoration",
       year: "2024",
-      materials: ["Ipe Wood", "Outdoor Kitchen", "Fire Feature"]
+      materials: ["Quality Restoration", "Expert Techniques", "Durable Materials"]
     }
   ];
 
   const categories = [
     { id: 'all', name: 'All Projects' },
     { id: 'restoration', name: 'Restoration' },
-    { id: 'upgrade', name: 'Upgrades' },
+    { id: 'upgrade', name: 'Construction' },
     { id: 'expansion', name: 'Expansions' },
     { id: 'luxury', name: 'Luxury' }
   ];

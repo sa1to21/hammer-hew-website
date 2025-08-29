@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
+import MainContactForm from '../ui/MainContactForm';
 
 const Contact: React.FC = () => {
   const contactMethods = [
@@ -94,44 +95,10 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Side - CTA and Additional Form */}
+          {/* Right Side - Main Contact Form */}
           <div className="space-y-8">
-            {/* Quick Contact Card */}
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-heading text-gray-800 mb-4">
-                Get Your Free Estimate
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Already filled out our main form? Call us directly or send a quick message below.
-              </p>
-              
-              {/* Simple Contact Form */}
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
-                  />
-                </div>
-                <textarea
-                  placeholder="Quick message about your project..."
-                  rows={3}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent resize-none"
-                />
-                <button
-                  type="submit"
-                  className="w-full btn-primary py-3"
-                >
-                  Send Quick Message
-                </button>
-              </form>
-            </div>
+            {/* Main Contact Form */}
+            <MainContactForm />
 
             {/* Business Hours */}
             <div className="bg-white border border-gray-200 rounded-2xl p-8">

@@ -33,7 +33,7 @@ function App() {
           <LazyContact />
         </Suspense>
       </Layout>
-      <AnalyticsDashboard />
+      {/* <AnalyticsDashboard /> */}
     </>
   );
 }
