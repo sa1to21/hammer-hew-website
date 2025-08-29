@@ -1,20 +1,20 @@
-# Hammer & Hew - Professional Deck Services Website
+# Hammer & Hew LLC - Professional Deck Services Website
 
 ![Hammer & Hew Logo](public/logo.png)
 
-A high-converting lead generation website for **Hammer & Hew**, a premium deck construction and restoration company serving the Bay Area. Built with modern React stack for optimal performance and user experience.
+A high-converting lead generation website for **Hammer & Hew LLC**, a premium deck construction and restoration company serving Philadelphia, PA. Built with modern React stack and deployed live on Netlify with working contact forms.
 
 ## 🚀 Project Overview
 
-**Hammer & Hew** specializes in premium deck construction, restoration, staining, and custom design services. This website serves as the primary lead generation tool, showcasing our expertise and capturing potential customer inquiries through an optimized conversion funnel.
+**Hammer & Hew LLC** specializes in premium deck construction, restoration, staining, and custom design services in Philadelphia, PA. This website serves as the primary lead generation tool with working contact forms and Philadelphia-optimized SEO.
 
-**Current Status**: 🟢 **PRODUCTION READY** - Complete website with real content, optimized UX, and professional design
+**Current Status**: 🟢 **LIVE IN PRODUCTION** - Deployed on Netlify with active Formspree integration
 
 ## ✨ Key Features
 
-- **🎯 Lead Generation**: Unified contact form with validation and Formspree integration
+- **🎯 Lead Generation**: Working contact forms with live Formspree integration to hammerandhewllc@gmail.com
 - **📱 Mobile-First**: Fully responsive design optimized for all devices
-- **🔍 SEO-Ready**: Complete meta tags, structured data, and semantic HTML
+- **🔍 SEO-Optimized**: Philadelphia-targeted keywords, local structured data, and semantic HTML
 - **⚡ Performance**: Vite build optimization with fast loading times
 - **🎨 Professional Design**: Modern emerald/slate/amber color scheme
 - **📷 Real Content**: Authentic project photos and customer testimonials
@@ -210,11 +210,11 @@ VITE_FORMSPREE_ENDPOINT=your_formspree_endpoint_here
 
 ## 📞 Contact Information
 
-**Hammer & Hew**  
-📧 Email: info@hammerhew.com  
-📱 Phone: (555) 123-4567  
+**Hammer & Hew LLC**  
+📧 Email: hammerandhewllc@gmail.com  
+📱 Phone: (917) 250-2222  
 🌐 Website: [hammerhew.com](https://hammerhew.com)  
-📍 Service Area: San Francisco Bay Area, CA
+📍 Service Area: Philadelphia, PA
 
 ## 📜 License
 
