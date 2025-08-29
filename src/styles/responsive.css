@@ -1,0 +1,104 @@
+/* Advanced Responsive Utilities */
+
+/* Container Queries for Future Support */
+@container (min-width: 300px) {
+  .card-responsive {
+    @apply p-4;
+  }
+}
+
+/* High DPI / Retina Display Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .logo-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    @apply border-2 border-black;
+  }
+  
+  .text-gray-600 {
+    @apply text-gray-900;
+  }
+}
+
+/* Dark Mode Preferences */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .hover-effect {
+    @apply transform-none;
+  }
+  
+  button, .clickable {
+    min-height: 44px; /* Apple's recommended touch target size */
+    min-width: 44px;
+  }
+}
+
+/* Ultra-wide Screen Optimizations */
+@media (min-width: 2560px) {
+  .max-w-7xl {
+    max-width: 120rem;
+  }
+}
+
+/* Landscape Phone Optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 100vh;
+  }
+  
+  .py-20 {
+    @apply py-10;
+  }
+}
+
+/* Foldable Device Support */
+@media (max-width: 280px) {
+  .text-4xl {
+    @apply text-2xl;
+  }
+  
+  .px-4 {
+    @apply px-2;
+  }
+}

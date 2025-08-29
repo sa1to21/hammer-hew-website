@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /
+Allow: /services
+Allow: /gallery
+Allow: /contact
+
+# Sitemap
+Sitemap: https://hammerandhew.com/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Block common bot traps (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$

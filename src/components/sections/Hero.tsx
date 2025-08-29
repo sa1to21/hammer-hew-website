@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Shield, Award, Calendar } from 'lucide-react';
 import ContactForm from '../ui/ContactForm';
+import ABTestButton from '../ui/ABTestButton';
 
 const Hero: React.FC = () => {
   const trustBadges = [
@@ -62,11 +63,16 @@ const Hero: React.FC = () => {
               })}
             </div>
 
-            {/* CTA Button */}
+            {/* CTA Button - A/B Test */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn-primary text-lg px-8 py-4">
-                View Our Work
-              </button>
+              <ABTestButton 
+                testId="hero_cta_button" 
+                className="text-lg px-8 py-4"
+                onClick={() => {
+                  // Scroll to contact form or open modal
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              />
               <button className="btn-secondary text-lg px-8 py-4">
                 Call (555) 123-4567
               </button>

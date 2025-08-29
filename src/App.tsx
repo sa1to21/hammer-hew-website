@@ -1,14 +1,23 @@
-import React from 'react';
+import { Suspense, useEffect } from 'react';
 import Layout from './components/layout/Layout';
 import SEO from './components/common/SEO';
 import Hero from './components/sections/Hero';
 import Services from './components/sections/Services';
 import WhyChooseUs from './components/sections/WhyChooseUs';
-import Gallery from './components/sections/Gallery';
-import Process from './components/sections/Process';
-import Contact from './components/sections/Contact';
+import LoadingSpinner from './components/ui/LoadingSpinner';
+import { LazyGallery, LazyProcess, LazyContact, LazyBeforeAfterGallery, LazyTestimonials } from './utils/lazyLoading';
+import { initializeABTests } from './utils/abTestsConfig';
+import { analytics } from './utils/analytics';
+import AnalyticsDashboard from './components/ui/AnalyticsDashboard';
 
 function App() {
+  // Initialize A/B tests and analytics on app start
+  useEffect(() => {
+    initializeABTests();
+    analytics.init(); // Initialize with GA tracking ID when ready: analytics.init('GA_TRACKING_ID');
+    analytics.trackPageView(window.location.pathname, document.title);
+  }, []);
+
   return (
     <>
       <SEO />
@@ -16,10 +25,15 @@ function App() {
         <Hero />
         <Services />
         <WhyChooseUs />
-        <Gallery />
-        <Process />
-        <Contact />
+        <Suspense fallback={<LoadingSpinner />}>
+          <LazyGallery />
+          <LazyBeforeAfterGallery />
+          <LazyTestimonials />
+          <LazyProcess />
+          <LazyContact />
+        </Suspense>
       </Layout>
+      <AnalyticsDashboard />
     </>
   );
 }

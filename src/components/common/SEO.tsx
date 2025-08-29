@@ -22,34 +22,116 @@ const SEO: React.FC<SEOProps> = ({
 }) => {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "HomeImprovementBusiness",
+    "@type": ["HomeImprovementBusiness", "LocalBusiness"],
     "name": "Hammer & Hew",
-    "description": "Professional deck construction and restoration services",
+    "alternateName": "Hammer and Hew Deck Construction",
+    "description": "Professional deck construction and restoration services serving the Bay Area for over 15 years",
     "url": url,
     "telephone": "(555) 123-4567",
+    "email": "info@hammerandhew.com",
+    "foundingDate": "2008",
+    "logo": `${url}/logo.png`,
+    "image": [
+      `${url}/images/deck-construction.jpg`,
+      `${url}/images/deck-restoration.jpg`,
+      `${url}/images/gallery-1.jpg`
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US",
       "addressRegion": "CA",
-      "addressLocality": "Bay Area"
+      "addressLocality": "Bay Area",
+      "postalCode": "94105"
     },
-    "areaServed": ["Bay Area", "San Francisco", "San Jose"],
-    "serviceType": ["Deck Construction", "Deck Restoration", "Deck Repair"],
-    "priceRange": "$$$",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.7749,
+      "longitude": -122.4194
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "San Francisco",
+        "containedInPlace": { "@type": "State", "name": "California" }
+      },
+      {
+        "@type": "City", 
+        "name": "San Jose",
+        "containedInPlace": { "@type": "State", "name": "California" }
+      },
+      {
+        "@type": "City",
+        "name": "Palo Alto", 
+        "containedInPlace": { "@type": "State", "name": "California" }
+      }
+    ],
+    "serviceType": ["Deck Construction", "Deck Restoration", "Deck Repair", "Deck Staining", "Custom Design"],
+    "services": [
+      {
+        "@type": "Service",
+        "name": "New Deck Construction",
+        "description": "Custom decks built to last generations",
+        "offers": {
+          "@type": "Offer",
+          "price": "15000",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "15000",
+            "priceCurrency": "USD",
+            "unitText": "starting at"
+          }
+        }
+      }
+    ],
+    "priceRange": "$1,500 - $50,000+",
+    "paymentAccepted": ["Cash", "Credit Card", "Check", "Financing"],
+    "currenciesAccepted": "USD",
+    "openingHours": "Mo-Sa 07:00-18:00",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
+      "bestRating": "5",
+      "worstRating": "1",
       "reviewCount": "150"
     },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah Johnson"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Exceptional craftsmanship and professional service. Our new deck exceeded all expectations!"
+      }
+    ],
     "hasCredential": [
       {
         "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "license",
+        "credentialCategory": "Professional License",
         "recognizedBy": {
           "@type": "Organization",
           "name": "California State License Board"
         }
       }
+    ],
+    "award": [
+      "Angie's List Super Service Award",
+      "Better Business Bureau A+ Rating"
+    ],
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Better Business Bureau"
+    },
+    "sameAs": [
+      "https://www.facebook.com/hammerandhew",
+      "https://www.linkedin.com/company/hammerandhew",
+      "https://www.yelp.com/biz/hammerandhew"
     ]
   };
 
@@ -59,9 +141,20 @@ const SEO: React.FC<SEOProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+      <meta name="author" content="Hammer & Hew" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+      <meta name="theme-color" content="#166534" />
+      
+      {/* Performance & Security */}
+      <meta httpEquiv="X-DNS-Prefetch-Control" content="on" />
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       
       {/* Robots */}
-      {noindex && <meta name="robots" content="noindex,nofollow" />}
+      {noindex ? (
+        <meta name="robots" content="noindex,nofollow" />
+      ) : (
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+      )}
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />

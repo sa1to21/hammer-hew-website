@@ -1,6 +1,8 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Hammer, RotateCcw, Paintbrush, PenTool } from 'lucide-react';
 import ServiceCard from '../ui/ServiceCard';
+import AnimatedCard from '../ui/AnimatedCard';
 
 const Services: React.FC = () => {
   const services = [
@@ -63,7 +65,13 @@ const Services: React.FC = () => {
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="text-4xl sm:text-5xl font-heading text-gray-800 mb-6">
             Our <span className="text-green-800">Services</span>
           </h2>
@@ -71,20 +79,21 @@ const Services: React.FC = () => {
             From new construction to restoration, we provide comprehensive deck services 
             with premium materials, expert craftsmanship, and industry-leading warranties.
           </p>
-        </div>
+        </motion.div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              startingPrice={service.startingPrice}
-              features={service.features}
-              popular={service.popular}
-            />
+            <AnimatedCard key={index} delay={index * 0.1}>
+              <ServiceCard
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                startingPrice={service.startingPrice}
+                features={service.features}
+                popular={service.popular}
+              />
+            </AnimatedCard>
           ))}
         </div>
 
