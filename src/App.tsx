@@ -5,10 +5,9 @@ import Hero from './components/sections/Hero';
 import ServicesProcessTabs from './components/sections/ServicesProcessTabs';
 import WhyChooseUs from './components/sections/WhyChooseUs';
 import LoadingSpinner from './components/ui/LoadingSpinner';
-import { LazyGallery, LazyProcess, LazyContact, LazyBeforeAfterGallery, LazyTestimonials } from './utils/lazyLoading';
+import { LazyGallery, LazyContact, /* LazyBeforeAfterGallery, */ LazyTestimonials } from './utils/lazyLoading';
 import { initializeABTests } from './utils/abTestsConfig';
 import { analytics } from './utils/analytics';
-import AnalyticsDashboard from './components/ui/AnalyticsDashboard';
 
 function App() {
   // Initialize A/B tests and analytics on app start
@@ -32,7 +31,6 @@ function App() {
           <LazyContact />
         </Suspense>
       </Layout>
-      {/* <AnalyticsDashboard /> */}
     </>
   );
 }

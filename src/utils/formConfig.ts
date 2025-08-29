@@ -2,7 +2,7 @@
 export const FORMSPREE_CONFIG = {
   // Replace with your actual Formspree endpoint
   // Get this from https://formspree.io after creating an account
-  CONTACT_FORM_ENDPOINT: 'https://formspree.io/f/YOUR_FORM_ID',
+  CONTACT_FORM_ENDPOINT: 'https://formspree.io/f/xvgbkpbj',
   
   // Form submission settings
   SETTINGS: {

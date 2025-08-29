@@ -26,26 +26,15 @@ const ContactForm: React.FC = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      // For demo purposes, we'll use console.log and a mock API call
-      // In production, uncomment the Formspree integration below
+      const { submitToFormspree } = await import('../../utils/formConfig');
+      const result = await submitToFormspree(data);
       
-      console.log('Form submitted:', data);
-      
-      // === FORMSPREE INTEGRATION (Uncomment for production) ===
-      // import { submitToFormspree } from '../../utils/formConfig';
-      // const result = await submitToFormspree(data);
-      // 
-      // if (result.success) {
-      //   alert(result.message);
-      //   reset();
-      // } else {
-      //   alert(result.message);
-      // }
-      
-      // === DEMO VERSION (Remove in production) ===
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      alert('✅ Demo Form Submitted!\n\nIn production, this will send to your email via Formspree.\n\nTo activate:\n1. Sign up at formspree.io\n2. Get your form endpoint\n3. Update src/utils/formConfig.ts');
-      reset();
+      if (result.success) {
+        alert(result.message);
+        reset();
+      } else {
+        alert(result.message);
+      }
       
     } catch (error) {
       console.error('Form submission error:', error);

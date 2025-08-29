@@ -198,8 +198,8 @@ export const generatePlaceholderUrl = (
 // Image optimization helper
 export const getOptimizedImageUrl = (
   imagePath: string, 
-  width?: number, 
-  quality?: number
+  _width?: number, 
+  _quality?: number
 ): string => {
   // Future: implement image optimization service (like Cloudinary)
   // For now, return original path

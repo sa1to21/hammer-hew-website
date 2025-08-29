@@ -16,10 +16,9 @@ const Header: React.FC = () => {
 
   const navigation = [
     { name: 'Home', href: '#home' },
-    { name: 'Why Choose Us', href: '#why-choose-us' },
+    { name: 'Services', href: '#services' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Reviews', href: '#testimonials' },
-    { name: 'Services & Process', href: '#services' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -38,22 +37,24 @@ const Header: React.FC = () => {
             <img 
               src="/logo.png" 
               alt="Hammer & Hew" 
-              className={`w-auto transition-all duration-300 ${
-                isScrolled ? 'h-12' : 'h-20'
-              }`}
+              className="w-auto transition-all duration-300"
+              style={{
+                height: isScrolled ? '70px' : '110px'
+              }}
             />
           </div>
 
           {/* Centered Navigation */}
           <nav className="hidden md:block flex-1">
-            <div className="flex justify-center space-x-8">
+            <div className="flex justify-center space-x-12">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-slate-700 hover:text-emerald-600 transition-colors duration-300 font-medium"
+                  className="relative text-slate-700 hover:text-emerald-600 transition-colors duration-300 font-medium text-lg group"
                 >
                   {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
             </div>
@@ -125,7 +126,7 @@ const Header: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 text-slate-700 hover:text-emerald-600 transition-colors duration-300"
+                className="block px-3 py-3 text-slate-700 hover:text-emerald-600 transition-colors duration-300 font-medium text-lg border-b border-gray-100 last:border-b-0"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

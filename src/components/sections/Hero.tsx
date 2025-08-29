@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Shield, Award, Calendar } from 'lucide-react';
-import ContactForm from '../ui/ContactForm';
-import ABTestButton from '../ui/ABTestButton';
 
 const Hero: React.FC = () => {
   const trustBadges = [

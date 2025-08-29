@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Award, Users, Clock, Wrench, Star, CheckCircle, TrendingUp, FileText } from 'lucide-react';
+import { Shield, Award, Wrench, FileText } from 'lucide-react';
 
 const WhyChooseUs: React.FC = () => {
   const mainBenefits = [
@@ -33,13 +33,6 @@ const WhyChooseUs: React.FC = () => {
     { number: "98%", label: "On-Time Delivery" }
   ];
 
-  const certifications = [
-    "Better Business Bureau A+ Rating",
-    "EPA Lead-Safe Certified",
-    "California State Licensed Contractor",
-    "Angie's List Super Service Award",
-    "Google Verified Business"
-  ];
 
   return (
     <section id="why-choose-us" className="py-20 bg-stone-50 border-b border-slate-200/30 shadow-sm">

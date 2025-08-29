@@ -275,41 +275,23 @@ const ServicesProcessTabs: React.FC = () => {
           )}
         </div>
 
-        {/* Bottom CTA */}
-        <motion.div 
-          className="text-center mt-6"
-          initial={{ opacity: 0, y: 30 }}
+        {/* Minimal CTA */}
+        <motion.div
+          className="text-center mt-8"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6 }}
         >
-          <div className="bg-slate-800 rounded-2xl p-6 md:p-7 text-white shadow-xl">
-            <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2">
-              Ready to Transform Your Outdoor Space?
-            </h3>
-            <p className="text-slate-300 text-lg mb-5 max-w-2xl mx-auto">
-              {activeTab === 'services' 
-                ? "Not sure which service you need? Our experts will recommend the best solution for your needs and budget."
-                : "From consultation to completion, we'll guide you through every step of creating your perfect deck."
-              }
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                className="bg-white text-slate-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
-                onClick={() => {
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Schedule Free Consultation
-              </button>
-              <button 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-800 transition-colors text-lg"
-                onClick={() => window.location.href = 'tel:(555)123-4567'}
-              >
-                Call (555) 123-4567
-              </button>
-            </div>
-          </div>
+          <button 
+            className="inline-flex items-center space-x-2 bg-emerald-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors duration-300 shadow-md hover:shadow-lg"
+            onClick={() => {
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            <span>Get Free Consultation</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
         </motion.div>
       </div>
     </section>

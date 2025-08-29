@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import MainContactForm from '../ui/MainContactForm';
 
 const Contact: React.FC = () => {
@@ -10,7 +10,6 @@ const Contact: React.FC = () => {
       primary: "(555) 123-4567",
       secondary: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
       action: "tel:(555)123-4567",
-      color: "text-green-800",
     },
     {
       icon: Mail,
@@ -18,7 +17,6 @@ const Contact: React.FC = () => {
       primary: "info@hammerandhew.com",
       secondary: "We respond within 2 hours",
       action: "mailto:info@hammerandhew.com",
-      color: "text-amber-700",
     },
     {
       icon: MapPin,
@@ -26,7 +24,6 @@ const Contact: React.FC = () => {
       primary: "Bay Area, California",
       secondary: "Free consultations within 25 miles",
       action: "#",
-      color: "text-yellow-500",
     },
   ];
 
@@ -59,8 +56,8 @@ const Contact: React.FC = () => {
                     className="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 shadow-sm hover:shadow-lg"
                   >
                     <div className="flex items-start space-x-4">
-                      <div className={`flex-shrink-0 w-12 h-12 ${method.color} bg-current bg-opacity-10 rounded-xl flex items-center justify-center group-hover:bg-opacity-20 transition-colors`}>
-                        <IconComponent className={`w-6 h-6 ${method.color}`} />
+                      <div className="flex-shrink-0 w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center shadow-md">
+                        <IconComponent className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="text-lg font-semibold text-gray-800 mb-1">
@@ -78,27 +75,6 @@ const Contact: React.FC = () => {
                 );
               })}
             </div>
-
-            {/* Additional Info */}
-            <div className="bg-gradient-to-br from-green-800 to-amber-700 rounded-2xl p-8 text-white">
-              <div className="flex items-center space-x-3 mb-4">
-                <MessageSquare className="w-6 h-6" />
-                <h3 className="text-xl font-semibold">Emergency Repairs</h3>
-              </div>
-              <p className="text-green-100 mb-4">
-                Deck safety emergency? We offer 24/7 emergency repair services 
-                for urgent structural issues.
-              </p>
-              <button className="bg-white text-green-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Call Emergency Line
-              </button>
-            </div>
-          </div>
-
-          {/* Right Side - Main Contact Form */}
-          <div className="space-y-8">
-            {/* Main Contact Form */}
-            <MainContactForm />
 
             {/* Business Hours */}
             <div className="bg-white border border-gray-200 rounded-2xl p-8">
@@ -128,20 +104,16 @@ const Contact: React.FC = () => {
                 </p>
               </div>
             </div>
+
+          </div>
+
+          {/* Right Side - Main Contact Form */}
+          <div className="space-y-8">
+            {/* Main Contact Form */}
+            <MainContactForm />
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex flex-col sm:flex-row gap-4">
-            <button className="btn-primary text-lg px-8 py-4">
-              Schedule Free Consultation
-            </button>
-            <button className="btn-secondary text-lg px-8 py-4">
-              View Our Portfolio
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );
