@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   const trustBadges = [
     { icon: Calendar, text: "5+ Years Experience" },
     { icon: Shield, text: "Licensed & Insured" },
-    { icon: FileText, text: "Free Detailed Estimates" },
+    { icon: FileText, text: "Free Estimates" },
   ];
 
   return (
@@ -26,14 +26,15 @@ const Hero: React.FC = () => {
           
           {/* Main Content - Centered */}
           <motion.div 
-            className="space-y-10 max-w-6xl mx-auto"
+            className="flex flex-col items-center space-y-8 max-w-6xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div>
+            {/* Title Section */}
+            <div className="text-center w-full">
               <motion.h1 
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-white leading-tight mb-6 px-4 sm:px-0"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-white leading-tight mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -41,16 +42,16 @@ const Hero: React.FC = () => {
                 Transform Your Backyard Into Your Family's <span className="text-emerald-400">Favorite Place</span>
               </motion.h1>
               
-              <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 leading-relaxed mb-8 max-w-2xl mx-auto text-center px-6 sm:px-0">
+              <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-2xl mx-auto">
                 Custom deck construction & restoration that lasts generations. 
-                Professional craftsmanship with premium materials and unmatched service.
+                Professional craftsmanship with premium materials and service you can trust.
               </p>
             </div>
 
             {/* CTA Button - Mobile First */}
-            <div className="flex justify-center w-full sm:hidden">
+            <div className="flex sm:hidden w-full justify-center">
               <button 
-                className="btn-primary text-xl px-12 py-5 mx-auto"
+                className="btn-primary text-xl px-16 py-6"
                 onClick={() => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
@@ -60,16 +61,16 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-3 sm:gap-6">
+            <div className="flex flex-col sm:flex-row justify-center items-stretch gap-4 sm:gap-6 w-full max-w-4xl">
               {trustBadges.map((badge, index) => {
                 const IconComponent = badge.icon;
                 return (
                   <div 
                     key={index} 
-                    className="flex items-center space-x-3 bg-white/90 backdrop-blur-sm px-5 py-4 rounded-lg shadow-lg w-full sm:w-auto max-w-xs"
+                    className="flex items-center justify-center space-x-2 bg-white/90 backdrop-blur-sm px-3 py-3 rounded-lg shadow-lg flex-1 min-w-0"
                   >
                     <IconComponent className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-800 text-center sm:text-left">
+                    <span className="text-sm font-medium text-gray-800 text-center">
                       {badge.text}
                     </span>
                   </div>
@@ -78,9 +79,9 @@ const Hero: React.FC = () => {
             </div>
 
             {/* CTA Button - Desktop */}
-            <div className="hidden sm:flex justify-center w-full">
+            <div className="hidden sm:flex w-full justify-center">
               <button 
-                className="btn-primary text-xl px-12 py-5 mx-auto"
+                className="btn-primary text-xl px-16 py-6"
                 onClick={() => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}

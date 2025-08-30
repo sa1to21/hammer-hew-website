@@ -37,7 +37,7 @@ const Gallery: React.FC = () => {
       id: 3,
       title: "Professional Deck Restoration",
       category: "restoration",
-      location: "Camden, NJ", 
+      location: "Broomall, PA", 
       description: "Complete deck restoration bringing new life to weathered decking",
       imageUrl: "/images/gallery/restoration/restoration-001.jpg",
       tags: ["Restoration", "Professional", "Renewal"]

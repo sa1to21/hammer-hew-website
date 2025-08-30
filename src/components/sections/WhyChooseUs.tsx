@@ -7,7 +7,7 @@ const WhyChooseUs: React.FC = () => {
     {
       icon: Shield,
       title: "Licensed & Insured",
-      description: "Fully licensed contractor with $2M liability insurance. Licensed #XXXXXX"
+      description: "Fully licensed contractor with $2M general liability insurance. Licensed #XXXXXX"
     },
     {
       icon: Award,
@@ -16,7 +16,7 @@ const WhyChooseUs: React.FC = () => {
     },
     {
       icon: FileText,
-      title: "Free Detailed Estimates",
+      title: "Free Estimates",
       description: "No hidden fees. Itemized quotes with material costs."
     },
     {

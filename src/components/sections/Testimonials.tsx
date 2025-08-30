@@ -43,7 +43,7 @@ const Testimonials: React.FC = () => {
     {
       id: 5,
       name: "Lisa Williams",
-      location: "Camden, NJ",
+      location: "Broomall, PA",
       rating: 5,
       text: "Best investment we've made in our home! The before and after difference is incredible. Friends and neighbors constantly ask who did our deck. We couldn't be happier with the quality and service.",
       project: "Cedar Deck Restoration & Staining",
@@ -68,7 +68,7 @@ const Testimonials: React.FC = () => {
             What Our <span className="text-green-800">Customers Say</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Read what Bay Area families say about 
+            Don't just take our word for it. Read what our customers say about 
             their deck transformation experience with Hammer & Hew.
           </p>
         </motion.div>

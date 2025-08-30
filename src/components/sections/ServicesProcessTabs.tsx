@@ -23,7 +23,7 @@ const ServicesProcessTabs: React.FC = () => {
       features: [
         "Design consultation & 3D visualization",
         "Premium materials: Cedar, Redwood, Composite",
-        "10-year structural warranty"
+        "We build in compliance with building codes."
       ],
       popular: true,
     },
@@ -34,7 +34,7 @@ const ServicesProcessTabs: React.FC = () => {
       features: [
         "Professional assessment & quote",
         "Power washing & surface prep",
-        "5-year finish warranty"
+        "Full or partial surface replacement."
       ],
     },
     {
@@ -102,18 +102,15 @@ const ServicesProcessTabs: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl sm:text-5xl font-heading text-gray-800 mb-6">
+          <h2 className="text-4xl sm:text-5xl font-heading text-gray-800 mb-8">
             Our <span className="text-emerald-600">Expertise</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            From premium services to seamless process - discover how we transform your outdoor space.
-          </p>
         </motion.div>
 
         {/* Tab Navigation */}

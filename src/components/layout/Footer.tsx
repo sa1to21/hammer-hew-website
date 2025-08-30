@@ -100,6 +100,7 @@ const Footer: React.FC = () => {
                 <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                 <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
                 <span>License #XXXXXX</span>
+                <span>HICPA #******</span>
               </div>
             </div>
           </div>
