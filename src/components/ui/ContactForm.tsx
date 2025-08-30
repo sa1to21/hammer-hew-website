@@ -131,13 +131,10 @@ const ContactForm: React.FC = () => {
           Service Needed *
         </label>
         <div className="relative">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <Wrench className="h-4 w-4 text-gray-400" />
-          </div>
           <select
             {...register('serviceType')}
             id="serviceType"
-            className={`block w-full pl-10 pr-8 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent ${
+            className={`block w-full pl-3 pr-8 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent ${
               errors.serviceType ? 'border-red-300' : 'border-gray-300'
             }`}
           >
