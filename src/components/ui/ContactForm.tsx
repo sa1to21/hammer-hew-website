@@ -137,7 +137,7 @@ const ContactForm: React.FC = () => {
           <select
             {...register('serviceType')}
             id="serviceType"
-            className={`block w-full pl-10 pr-3 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent ${
+            className={`block w-full pl-10 pr-8 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent ${
               errors.serviceType ? 'border-red-300' : 'border-gray-300'
             }`}
           >
