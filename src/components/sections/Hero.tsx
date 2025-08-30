@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
               
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 leading-relaxed mb-8 max-w-2xl mx-auto text-center px-6 sm:px-0">
                 Custom deck construction & restoration that lasts generations. 
-                Professional craftsmanship with premium materials and unmatched warranty.
+                Professional craftsmanship with premium materials and unmatched service.
               </p>
             </div>
 

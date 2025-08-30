@@ -58,7 +58,7 @@ const Header: React.FC = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="relative text-white hover:text-emerald-400 transition-colors duration-300 font-medium text-lg group"
+                  className="relative text-white hover:text-emerald-400 transition-colors duration-300 font-bold text-lg group"
                 >
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
@@ -133,7 +133,7 @@ const Header: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-4 py-4 text-white hover:text-emerald-400 hover:bg-white/10 transition-all duration-300 font-medium text-lg rounded-lg"
+                className="block px-4 py-4 text-white hover:text-emerald-400 hover:bg-white/10 transition-all duration-300 font-bold text-lg rounded-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
