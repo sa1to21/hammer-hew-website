@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
           
           {/* Main Content - Centered */}
           <motion.div 
-            className="space-y-10 max-w-4xl mx-auto"
+            className="space-y-10 max-w-6xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -38,8 +38,7 @@ const Hero: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Transform Your Backyard Into Your Family's 
-                <span className="text-emerald-400"> Favorite Place</span>
+                Transform Your Backyard Into Your Family's <span className="text-emerald-400">Favorite Place</span>
               </motion.h1>
               
               <p className="text-xl sm:text-2xl text-gray-200 leading-relaxed mb-8 max-w-2xl mx-auto text-center">

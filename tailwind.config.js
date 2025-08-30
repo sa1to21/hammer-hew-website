@@ -13,6 +13,10 @@ export default {
         'success-green': '#27AE60',
         'neutral-dark': '#2C3E50',
         'neutral-light': '#F8F9FA',
+      },
+      fontFamily: {
+        'heading': ['Merriweather', 'serif'],
+        'body': ['Source Sans Pro', 'sans-serif'],
       }
     },
   },

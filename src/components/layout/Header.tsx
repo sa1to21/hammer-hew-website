@@ -133,7 +133,7 @@ const Header: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-3 text-white hover:text-emerald-400 transition-colors duration-300 font-medium text-lg border-b border-white/20 last:border-b-0"
+                className="block px-3 py-3 text-white hover:text-emerald-400 transition-colors duration-300 font-medium text-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

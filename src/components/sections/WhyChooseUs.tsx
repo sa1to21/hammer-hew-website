@@ -34,7 +34,7 @@ const WhyChooseUs: React.FC = () => {
 
 
   return (
-    <section id="why-choose-us" className="py-20 bg-stone-50 border-b border-slate-200/30 shadow-sm">
+    <section id="why-choose-us" className="py-20 bg-gradient-to-br from-green-50 via-white to-amber-50 border-b border-slate-200/30 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
