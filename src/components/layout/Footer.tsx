@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             />
             <p className="text-gray-300 mb-4">
               Professional deck construction and restoration services. 
-              Licensed, insured, and backed by our 10-year warranty.
+              Licensed, insured, and committed to quality craftsmanship.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -57,11 +57,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-heading text-lg font-semibold mb-4 text-white">Our Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">New Deck Construction</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Deck Restoration</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Staining & Sealing</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Custom Design</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Deck Repair</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">New Deck Construction</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Deck Restoration</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Staining & Sealing</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Custom Design</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Deck Repair</a></li>
             </ul>
           </div>
 
@@ -79,9 +79,9 @@ const Footer: React.FC = () => {
               </div>
               <div className="text-sm text-gray-300">
                 <p>✓ Licensed & Insured</p>
-                <p>✓ 10-Year Warranty</p>
-                <p>✓ BBB A+ Rating</p>
-                <p>✓ 15+ Years Experience</p>
+                <p>✓ Quality Guarantee</p>
+                <p>✓ Thumbtack Pro</p>
+                <p>✓ 5+ Years Experience</p>
               </div>
             </div>
           </div>

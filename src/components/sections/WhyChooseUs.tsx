@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Award, Wrench, FileText } from 'lucide-react';
+import { Shield, Award, Wrench, FileText, Clock } from 'lucide-react';
 
 const WhyChooseUs: React.FC = () => {
   const mainBenefits = [
@@ -11,8 +11,8 @@ const WhyChooseUs: React.FC = () => {
     },
     {
       icon: Award,
-      title: "10-Year Warranty",
-      description: "Industry-leading warranty on all structural work. We stand behind our craftsmanship."
+      title: "Quality Guarantee",
+      description: "We guarantee the quality of our work and stand behind our craftsmanship."
     },
     {
       icon: FileText,
@@ -23,15 +23,14 @@ const WhyChooseUs: React.FC = () => {
       icon: Wrench,
       title: "Premium Materials Only",
       description: "Cedar, Redwood, and top-grade composite materials."
+    },
+    {
+      icon: Clock,
+      title: "Always On Schedule",
+      description: "We complete projects on time, respecting your schedule and deadlines."
     }
   ];
 
-  const stats = [
-    { number: "500+", label: "Decks Built" },
-    { number: "15+", label: "Years Experience" },
-    { number: "4.9", label: "Star Rating" },
-    { number: "98%", label: "On-Time Delivery" }
-  ];
 
 
   return (
@@ -55,7 +54,7 @@ const WhyChooseUs: React.FC = () => {
         </motion.div>
 
         {/* Main Benefits Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-12 mb-16">
           {mainBenefits.map((benefit, index) => {
             const IconComponent = benefit.icon;
             return (
@@ -81,43 +80,6 @@ const WhyChooseUs: React.FC = () => {
           })}
         </div>
 
-        {/* Stats Section */}
-        <motion.div 
-          className="bg-slate-800 rounded-3xl p-8 md:p-12 text-white mb-16 shadow-2xl"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-heading font-bold mb-4 text-white">
-              Our Track Record Speaks for Itself
-            </h3>
-            <p className="text-green-100 text-lg">
-              Numbers that matter to Bay Area homeowners
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-green-100 font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Two Column Layout */}
         {/* 

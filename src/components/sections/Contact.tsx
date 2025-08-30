@@ -8,14 +8,14 @@ const Contact: React.FC = () => {
       icon: Phone,
       title: "Call Us",
       primary: "(917) 250-2222",
-      secondary: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
+      secondary: "Mon-Sat: 8AM-6PM, Sun: Closed",
       action: "tel:(917)250-2222",
     },
     {
       icon: Mail,
       title: "Email Us",
       primary: "hammerandhewllc@gmail.com",
-      secondary: "We respond within 2 hours",
+      secondary: "We respond within 1 hour",
       action: "mailto:hammerandhewllc@gmail.com",
     },
     {
@@ -85,12 +85,8 @@ const Contact: React.FC = () => {
               
               <div className="space-y-3">
                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span className="text-gray-600">Monday - Friday</span>
+                  <span className="text-gray-600">Monday - Saturday</span>
                   <span className="font-medium text-gray-800">8:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span className="text-gray-600">Saturday</span>
-                  <span className="font-medium text-gray-800">9:00 AM - 4:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span className="text-gray-600">Sunday</span>
@@ -100,7 +96,7 @@ const Contact: React.FC = () => {
 
               <div className="mt-6 p-4 bg-green-800 bg-opacity-5 rounded-lg">
                 <p className="text-sm text-green-800 font-medium">
-                  ⚡ Typically respond to estimates within 2 business hours
+                  ⚡ Typically respond to estimates within 1 hour
                 </p>
               </div>
             </div>

@@ -9,7 +9,7 @@ const contactFormSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   phone: z.string().min(10, 'Please enter a valid phone number'),
   serviceType: z.string().min(1, 'Please select a service type'),
-  message: z.string().min(10, 'Please provide more details about your project'),
+  message: z.string().min(10, 'Please share your message or question'),
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -56,7 +56,7 @@ const ContactForm: React.FC = () => {
       {/* Name Field */}
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-          Full Name *
+          First Name *
         </label>
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -69,7 +69,7 @@ const ContactForm: React.FC = () => {
             className={`block w-full pl-10 pr-3 py-3 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent ${
               errors.name ? 'border-red-300' : 'border-gray-300'
             }`}
-            placeholder="John Smith"
+            placeholder="John"
           />
         </div>
         {errors.name && (
@@ -156,7 +156,7 @@ const ContactForm: React.FC = () => {
       {/* Message Field */}
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-          Project Details *
+          Message *
         </label>
         <textarea
           {...register('message')}
@@ -165,7 +165,7 @@ const ContactForm: React.FC = () => {
           className={`block w-full px-3 py-3 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent resize-none ${
             errors.message ? 'border-red-300' : 'border-gray-300'
           }`}
-          placeholder="Tell us about your deck project, size, timeline, and any specific requirements..."
+          placeholder="Tell us about your project or ask any questions you have..."
         />
         {errors.message && (
           <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>

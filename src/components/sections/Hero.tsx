@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, Shield, Award, Calendar } from 'lucide-react';
+import { Star, Shield, FileText, Calendar } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const trustBadges = [
-    { icon: Calendar, text: "15+ Years Experience" },
+    { icon: Calendar, text: "5+ Years Experience" },
     { icon: Shield, text: "Licensed & Insured" },
-    { icon: Award, text: "10-Year Warranty" },
+    { icon: FileText, text: "Free Detailed Estimates" },
   ];
 
   return (
@@ -21,12 +21,12 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-slate-900/60"></div>
       </div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-        <div className="flex flex-col items-center justify-center min-h-[80vh] text-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] text-center">
           
           {/* Main Content - Centered */}
           <motion.div 
-            className="space-y-8 max-w-4xl mx-auto"
+            className="space-y-10 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
               {trustBadges.map((badge, index) => {
                 const IconComponent = badge.icon;
                 return (
@@ -66,28 +66,22 @@ const Hero: React.FC = () => {
               })}
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            {/* CTA Button */}
+            <div className="flex justify-center w-full">
               <button 
-                className="btn-primary text-lg px-8 py-4"
+                className="btn-primary text-xl px-12 py-5 mx-auto"
                 onClick={() => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 Get Free Estimate
               </button>
-              <button 
-                className="bg-white text-slate-800 border-2 border-white text-lg px-8 py-4 rounded-lg font-semibold hover:bg-slate-800 hover:text-white transition-colors duration-300 shadow-lg"
-                onClick={() => window.location.href = 'tel:(917)250-2222'}
-              >
-                Call (917) 250-2222
-              </button>
             </div>
 
             {/* Social Proof */}
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 max-w-md mx-auto">
+            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 max-w-sm mx-auto w-full">
               <div className="flex items-center justify-center space-x-4 mb-2">
-                <div className="flex">
+                <div className="flex justify-center">
                   {[1,2,3,4,5].map((star) => (
                     <Star key={star} className="w-5 h-5 text-yellow-500 fill-current" />
                   ))}
@@ -95,7 +89,7 @@ const Hero: React.FC = () => {
                 <span className="text-lg font-semibold text-gray-800">4.9/5</span>
               </div>
               <p className="text-sm text-gray-600 text-center">
-                Trusted by <span className="font-semibold text-emerald-700">500+ Philadelphia families</span>
+                <span className="font-semibold text-emerald-700">Top rated by local customers</span>
               </p>
             </div>
           </motion.div>

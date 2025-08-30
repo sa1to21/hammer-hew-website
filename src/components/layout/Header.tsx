@@ -22,11 +22,14 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-        : 'bg-white/90 backdrop-blur-sm shadow-md'
-    }`}>
+    <header className="fixed top-0 w-full z-50 transition-all duration-300 bg-gradient-to-b from-black/30 to-transparent backdrop-blur-sm"
+      style={{
+        background: isScrolled 
+          ? 'rgba(0, 0, 0, 0.2)' 
+          : 'linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent)',
+        backdropFilter: isScrolled ? 'blur(12px)' : 'blur(4px)',
+        boxShadow: isScrolled ? '0 10px 15px -3px rgba(0, 0, 0, 0.1)' : 'none'
+      }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center transition-all duration-300 ${
           isScrolled ? 'h-16' : 'h-24'
@@ -55,10 +58,10 @@ const Header: React.FC = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="relative text-slate-700 hover:text-emerald-600 transition-colors duration-300 font-medium text-lg group"
+                  className="relative text-white hover:text-emerald-400 transition-colors duration-300 font-medium text-lg group"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
             </div>
@@ -73,25 +76,25 @@ const Header: React.FC = () => {
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Free Estimate
+              Contact Us
             </button>
             
             {/* Phone */}
             <a 
               href="tel:(917)250-2222" 
-              className="flex items-center space-x-2 text-slate-700 hover:text-emerald-600 transition-colors font-medium"
+              className="flex items-center space-x-2 text-white hover:text-emerald-400 transition-colors font-medium"
             >
               <Phone className="w-4 h-4" />
               <span>(917) 250-2222</span>
             </a>
             
             {/* Social Icons */}
-            <div className="flex items-center space-x-3 border-l border-slate-300 pl-6">
+            <div className="flex items-center space-x-3 border-l border-white/30 pl-6">
               <a 
                 href="https://instagram.com/hammerandhew" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-slate-600 hover:text-pink-500 transition-colors"
+                className="text-white/80 hover:text-pink-400 transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -99,7 +102,7 @@ const Header: React.FC = () => {
                 href="https://facebook.com/hammerandhew" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-slate-600 hover:text-blue-600 transition-colors"
+                className="text-white/80 hover:text-blue-400 transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -110,7 +113,7 @@ const Header: React.FC = () => {
           <div className="md:hidden ml-auto">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-slate-700 hover:text-emerald-600"
+              className="text-white hover:text-emerald-400"
             >
               {isMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -124,19 +127,19 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
+        <div className="md:hidden bg-black/90 backdrop-blur-md border-t border-white/20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-3 text-slate-700 hover:text-emerald-600 transition-colors duration-300 font-medium text-lg border-b border-gray-100 last:border-b-0"
+                className="block px-3 py-3 text-white hover:text-emerald-400 transition-colors duration-300 font-medium text-lg border-b border-white/20 last:border-b-0"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
-            <div className="pt-4 border-t border-gray-200 mt-4 px-3">
+            <div className="pt-4 border-t border-white/20 mt-4 px-3">
               {/* CTA Button */}
               <button 
                 className="btn-primary w-full mb-4"
@@ -145,25 +148,25 @@ const Header: React.FC = () => {
                   setIsMenuOpen(false);
                 }}
               >
-                Free Estimate
+                Contact Us
               </button>
               
               {/* Phone */}
               <a 
                 href="tel:(917)250-2222" 
-                className="flex items-center justify-center space-x-2 py-2 text-slate-700 hover:text-emerald-600 font-medium"
+                className="flex items-center justify-center space-x-2 py-2 text-white hover:text-emerald-400 font-medium"
               >
                 <Phone className="w-4 h-4" />
                 <span>(917) 250-2222</span>
               </a>
               
               {/* Social Icons */}
-              <div className="flex items-center justify-center space-x-6 px-3 py-4 border-t border-gray-200 mt-4">
+              <div className="flex items-center justify-center space-x-6 px-3 py-4 border-t border-white/20 mt-4">
                 <a 
                   href="https://instagram.com/hammerandhew" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-slate-600 hover:text-pink-500 transition-colors"
+                  className="text-white/80 hover:text-pink-400 transition-colors"
                 >
                   <Instagram className="w-6 h-6" />
                 </a>
@@ -171,7 +174,7 @@ const Header: React.FC = () => {
                   href="https://facebook.com/hammerandhew" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-slate-600 hover:text-blue-600 transition-colors"
+                  className="text-white/80 hover:text-blue-400 transition-colors"
                 >
                   <Facebook className="w-6 h-6" />
                 </a>
