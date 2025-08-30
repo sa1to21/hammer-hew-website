@@ -132,7 +132,7 @@ const ServicesProcessTabs: React.FC = () => {
         </motion.div>
 
         {/* Tab Content */}
-        <div className="min-h-[400px]">
+        <div className="min-h-[420px] flex flex-col">
           {activeTab === 'services' && (
             <motion.div
               key="services"
@@ -140,9 +140,10 @@ const ServicesProcessTabs: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ duration: 0.4 }}
+              className="flex-1"
             >
               {/* Services Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 mt-12">
                 {services.map((service, index) => {
                   const IconComponent = service.icon;
                   return (
@@ -152,7 +153,8 @@ const ServicesProcessTabs: React.FC = () => {
                         service.popular ? 'ring-2 ring-amber-500 ring-opacity-60' : ''
                       }`}
                       initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                       {/* Popular Badge */}
@@ -203,9 +205,10 @@ const ServicesProcessTabs: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.4 }}
+              className="flex-1"
             >
               {/* Process Steps - Card Layout */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 mt-20">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 mt-16">
                 {processSteps.map((step, index) => {
                   const IconComponent = step.icon;
                   return (
@@ -213,7 +216,8 @@ const ServicesProcessTabs: React.FC = () => {
                       key={step.id}
                       className="relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-6 h-full flex flex-col"
                       initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                       {/* Step Number Badge */}
