@@ -8,7 +8,6 @@ import {
   MessageCircle,
   FileCheck,
   CheckCircle,
-  Clock,
   ArrowRight
 } from 'lucide-react';
 
@@ -25,7 +24,6 @@ const ServicesProcessTabs: React.FC = () => {
         "Premium materials: Cedar, Redwood, Composite",
         "We build in compliance with building codes."
       ],
-      popular: true,
     },
     {
       icon: RotateCcw,
@@ -36,15 +34,15 @@ const ServicesProcessTabs: React.FC = () => {
         "Power washing & surface prep",
         "Full or partial surface replacement."
       ],
+      popular: true,
     },
     {
       icon: Paintbrush,
-      title: "Staining & Sealing",
+      title: "Sanding & Sealing",
       description: "Protect and beautify your deck with premium finishes that enhance natural wood beauty.",
       features: [
         "Surface preparation & cleaning",
-        "Premium stain & sealant products",
-        "3-year finish warranty"
+        "Premium-grade finishing products."
       ],
     },
     {
@@ -64,36 +62,25 @@ const ServicesProcessTabs: React.FC = () => {
       id: 1,
       icon: MessageCircle,
       title: "Free Consultation",
-      duration: "1-2 hours",
       description: "On-site visit to understand your vision and assess your space."
     },
     {
       id: 2,
       icon: PenTool,
       title: "Design & Proposal",
-      duration: "3-5 days",
       description: "Detailed plans and comprehensive quote with 3D renderings."
     },
     {
       id: 3,
       icon: FileCheck,
       title: "Permits & Preparation",
-      duration: "1-2 weeks",
       description: "Handle all permits and prepare site for construction."
     },
     {
       id: 4,
       icon: Hammer,
       title: "Construction",
-      duration: "5-10 days",
-      description: "Skilled craftsmen bring your deck to life with daily updates."
-    },
-    {
-      id: 5,
-      icon: CheckCircle,
-      title: "Final Inspection",
-      duration: "1 day",
-      description: "Quality inspection and final walkthrough with warranty documentation."
+      description: "Construction based on an approved design, meeting all safety standards and deadlines."
     }
   ];
 
@@ -219,7 +206,7 @@ const ServicesProcessTabs: React.FC = () => {
               transition={{ duration: 0.4 }}
             >
               {/* Process Steps - Card Layout */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 mt-20">
                 {processSteps.map((step, index) => {
                   const IconComponent = step.icon;
                   return (
@@ -244,14 +231,9 @@ const ServicesProcessTabs: React.FC = () => {
 
                       {/* Content */}
                       <div className="flex-1">
-                        <h3 className="text-lg font-heading font-semibold text-gray-800 mb-2">
+                        <h3 className="text-lg font-heading font-semibold text-gray-800 mb-3">
                           {step.title}
                         </h3>
-                        
-                        <div className="flex items-center space-x-1 mb-3 text-sm text-emerald-600 font-medium">
-                          <Clock className="w-4 h-4" />
-                          <span>{step.duration}</span>
-                        </div>
                         
                         <p className="text-sm text-gray-600 leading-relaxed">
                           {step.description}
@@ -274,7 +256,7 @@ const ServicesProcessTabs: React.FC = () => {
 
         {/* Minimal CTA */}
         <motion.div
-          className="text-center mt-8"
+          className="text-center mt-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

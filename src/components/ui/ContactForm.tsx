@@ -8,7 +8,6 @@ const contactFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Please enter a valid email address'),
   phone: z.string().min(10, 'Please enter a valid phone number'),
-  serviceType: z.string().min(1, 'Please select a service type'),
   message: z.string().min(10, 'Please share your message or question'),
 });
 
@@ -41,15 +40,6 @@ const ContactForm: React.FC = () => {
       alert('Sorry, there was an error. Please try calling us directly at (917) 250-2222.');
     }
   };
-
-  const serviceTypes = [
-    { value: '', label: 'Select Service Type' },
-    { value: 'new-construction', label: 'New Deck Construction' },
-    { value: 'restoration', label: 'Deck Restoration' },
-    { value: 'staining', label: 'Staining & Sealing' },
-    { value: 'repair', label: 'Deck Repair' },
-    { value: 'design', label: 'Custom Design' },
-  ];
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -122,31 +112,6 @@ const ContactForm: React.FC = () => {
         </div>
         {errors.phone && (
           <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
-        )}
-      </div>
-
-      {/* Service Type Field */}
-      <div>
-        <label htmlFor="serviceType" className="block text-sm font-medium text-gray-700 mb-2">
-          Service Needed *
-        </label>
-        <div className="relative">
-          <select
-            {...register('serviceType')}
-            id="serviceType"
-            className={`block w-full pl-3 pr-8 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent ${
-              errors.serviceType ? 'border-red-300' : 'border-gray-300'
-            }`}
-          >
-            {serviceTypes.map((service) => (
-              <option key={service.value} value={service.value}>
-                {service.label}
-              </option>
-            ))}
-          </select>
-        </div>
-        {errors.serviceType && (
-          <p className="mt-1 text-sm text-red-600">{errors.serviceType.message}</p>
         )}
       </div>
 
