@@ -7,7 +7,6 @@ import {
   PenTool,
   MessageCircle,
   FileCheck,
-  CheckCircle,
   ArrowRight
 } from 'lucide-react';
 
