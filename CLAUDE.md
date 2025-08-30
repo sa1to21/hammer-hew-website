@@ -100,12 +100,14 @@ hammer-hew-website/
 - **Success**: `emerald-600` (#059669) - Primary buttons
 - **Text**: `slate-700` (#334155) - Primary text, navigation
 - **Light Text**: `slate-300` (#cbd5e1) - Secondary text on dark backgrounds
-- **Background**: `white` / `stone-50` (#fafaf9) - Alternating section backgrounds
+- **Background Gradients**: `from-green-50 via-white to-amber-50` - Featured sections (WhyChooseUs, Testimonials, Contact)
+- **Background White**: `white` - Standard sections (Gallery, Services)
 
 ### Typography
-- **Headlines**: Playfair Display (Google Fonts) - `font-heading`
-- **Body Text**: Source Sans Pro (Google Fonts) - `font-body`  
+- **Headlines**: Merriweather (Google Fonts) - `font-heading` - Modern serif for professional trust
+- **Body Text**: Source Sans Pro (Google Fonts) - `font-body` - Clean sans-serif for readability
 - **Accents**: Bebas Neue (Google Fonts) - `font-accent` (not currently used)
+- **Font Weights**: Headlines use 700, body text uses 400-600 range
 
 ### Component Classes
 ```css
@@ -125,36 +127,42 @@ Hero → Why Choose Us → Gallery → Reviews → Services & Process (Tabs) →
 ### Section Details:
 
 **1. Hero Section**
-- Centered single-column layout (form moved to Contact)
-- Trust badges (15+ Years, Licensed, Warranty)
-- Background image with overlay
-- Call-to-action buttons redirecting to contact form
+- Centered single-column layout with expanded container (max-w-6xl)
+- Trust badges (5+ Years Experience, Licensed & Insured, Free Detailed Estimates)
+- Background image with dark overlay
+- Optimized title layout: "Transform Your Backyard Into Your Family's Favorite Place"
+- Single CTA button redirecting to contact form
 
 **2. Why Choose Us**
-- 4 key benefits with emerald icons (Licensed, Warranty, Free Estimates, Premium Materials)
-- Dark statistics block (500+ decks, 4.9★ rating)
-- Bottom sections commented out (can be re-enabled)
+- 5 key benefits with emerald icons (Licensed & Insured, Quality Guarantee, Free Estimates, Premium Materials, Always On Schedule)
+- Gradient background (from-green-50 via-white to-amber-50) for visual appeal
+- Streamlined layout focusing on core value propositions
+- Statistics sections removed for cleaner presentation
 
 **3. Gallery**
 - 6 real project photos (2 new-construction, 4 restoration)
-- Category filtering with project counts
-- Real image paths to uploaded photos
+- Clean white background for photo focus
+- Simplified layout without filtering for better UX
+- Real image paths to uploaded photos with hover effects
 
 **4. Reviews (Testimonials)**
-- Customer testimonials carousel
-- Statistics with animated counters
-- CTA for consultation booking
+- Customer testimonials with Philadelphia-area locations
+- Gradient background matching brand aesthetic (from-green-50 via-white to-amber-50)
+- Trust badges (Google Reviews, Thumbtack Pro, Yelp Reviews)
+- Simplified layout focusing on customer voices
 
 **5. Services & Process (Tabs)**
 - Combined tabbed interface: "What We Do" | "How We Work"
-- Services: 4 compact cards without pricing
-- Process: 5 card-based steps with arrows
-- Unified CTA at bottom with slate-800 styling
+- Clean white background for content clarity
+- Services: 4 compact cards without pricing (New Deck Construction, Deck Restoration, Staining & Sealing, Custom Design)
+- Process: 5 card-based steps with arrows and time estimates
+- Unified CTA at bottom with emerald styling
 
 **6. Contact**
-- Main contact form (moved from Hero)
-- Multiple contact methods
-- Business hours and service area info
+- Main contact form with simplified fields (First Name, Email, Phone, Message)
+- Gradient background for warm, welcoming feel (from-green-50 via-white to-amber-50)
+- Multiple contact methods with updated business hours (Mon-Sat: 8AM-6PM, Sun: Emergency Only)
+- Philadelphia, PA service area with free consultation within 25 miles
 
 ## Development Progress Status
 
@@ -202,9 +210,17 @@ Hero → Why Choose Us → Gallery → Reviews → Services & Process (Tabs) →
 - **Contact Information Update**: Phone (917) 250-2222, Philadelphia, PA location
 - **Complete SEO Optimization**: Philadelphia-targeted keywords, structured data
 - **Navigation Refinement**: Removed Home, optimized order (Gallery → Reviews → Services → Contact)
-- **Mobile UX Enhancement**: Improved hamburger menu positioning and spacing
+- **Mobile UX Enhancement**: Improved hamburger menu positioning and spacing, fixed double border lines
 - **Netlify Deployment**: Live site with _redirects for SPA routing and favicon
 - **Business Branding**: Updated to "Hammer & Hew LLC" across all components
+
+### ✅ COMPLETED - ЭТАП 6: Typography & Visual Design Enhancement (Latest Update)
+- **Typography Overhaul**: Changed from Playfair Display to Merriweather serif for better readability and professional appearance
+- **Background Design System**: Implemented gradient backgrounds for key sections (WhyChooseUs, Testimonials, Contact) using `from-green-50 via-white to-amber-50`
+- **Hero Section Optimization**: Expanded container width to max-w-6xl for better title layout and visual balance
+- **Visual Rhythm**: Created alternating background pattern (gradient → white → gradient → white → gradient) for improved user flow
+- **Mobile Navigation Fix**: Resolved double border lines issue in mobile menu
+- **Content Updates**: Updated trust badges, simplified form fields, and optimized business hours display
 
 ### 🎆 PROJECT COMPLETE - PRODUCTION READY
 **Live Site**: Deployed on Netlify with custom domain support
