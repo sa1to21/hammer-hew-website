@@ -127,56 +127,56 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-black/90 backdrop-blur-md border-t border-white/20">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-black/95 backdrop-blur-lg border-t border-white/20 shadow-2xl">
+          <div className="px-4 pt-4 pb-6 space-y-2">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-3 text-white hover:text-emerald-400 transition-colors duration-300 font-medium text-lg"
+                className="block px-4 py-4 text-white hover:text-emerald-400 hover:bg-white/10 transition-all duration-300 font-medium text-lg rounded-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
-            <div className="pt-4 border-t border-white/20 mt-4 px-3">
+            <div className="pt-6 border-t border-white/20 mt-6 space-y-4">
               {/* CTA Button */}
               <button 
-                className="btn-primary w-full mb-4"
+                className="btn-primary w-full py-4 text-lg font-semibold shadow-lg"
                 onClick={() => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   setIsMenuOpen(false);
                 }}
               >
-                Contact Us
+                Get Free Estimate
               </button>
               
               {/* Phone */}
               <a 
                 href="tel:(917)250-2222" 
-                className="flex items-center justify-center space-x-2 py-2 text-white hover:text-emerald-400 font-medium"
+                className="flex items-center justify-center space-x-3 py-4 text-white hover:text-emerald-400 hover:bg-white/10 font-medium rounded-lg transition-all duration-300"
               >
-                <Phone className="w-4 h-4" />
-                <span>(917) 250-2222</span>
+                <Phone className="w-5 h-5" />
+                <span className="text-lg">(917) 250-2222</span>
               </a>
               
               {/* Social Icons */}
-              <div className="flex items-center justify-center space-x-6 px-3 py-4 border-t border-white/20 mt-4">
+              <div className="flex items-center justify-center space-x-8 py-4 border-t border-white/20">
                 <a 
                   href="https://instagram.com/hammerandhew" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-pink-400 transition-colors"
+                  className="text-white/80 hover:text-pink-400 transition-colors transform hover:scale-110"
                 >
-                  <Instagram className="w-6 h-6" />
+                  <Instagram className="w-7 h-7" />
                 </a>
                 <a 
                   href="https://facebook.com/hammerandhew" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-blue-400 transition-colors"
+                  className="text-white/80 hover:text-blue-400 transition-colors transform hover:scale-110"
                 >
-                  <Facebook className="w-6 h-6" />
+                  <Facebook className="w-7 h-7" />
                 </a>
               </div>
             </div>

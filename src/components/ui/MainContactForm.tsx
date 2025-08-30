@@ -4,12 +4,12 @@ import ContactForm from './ContactForm';
 
 const MainContactForm: React.FC = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md mx-auto">
+    <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 max-w-md mx-auto">
       <div className="mb-6">
-        <h2 className="text-3xl font-heading text-gray-800 mb-3 text-center">
+        <h2 className="text-2xl sm:text-3xl font-heading text-gray-800 mb-3 text-center">
           Get Your Free Estimate
         </h2>
-        <p className="text-gray-600 text-center">
+        <p className="text-sm sm:text-base text-gray-600 text-center">
           Start your deck transformation today. No obligation consultation.
         </p>
       </div>

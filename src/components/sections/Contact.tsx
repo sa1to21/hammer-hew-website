@@ -42,11 +42,11 @@ const Contact: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           
           {/* Contact Methods */}
-          <div className="space-y-8">
-            <div className="grid grid-cols-1 sm:grid-cols-1 gap-6">
+          <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6">
               {contactMethods.map((method, index) => {
                 const IconComponent = method.icon;
                 return (
@@ -104,7 +104,7 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Right Side - Main Contact Form */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8 order-1 lg:order-2">
             {/* Main Contact Form */}
             <MainContactForm />
           </div>

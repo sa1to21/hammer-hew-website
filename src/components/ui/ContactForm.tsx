@@ -161,8 +161,8 @@ const ContactForm: React.FC = () => {
         <textarea
           {...register('message')}
           id="message"
-          rows={4}
-          className={`block w-full px-3 py-3 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent resize-none ${
+          rows={3}
+          className={`block w-full px-3 py-3 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent resize-none text-sm sm:text-base ${
             errors.message ? 'border-red-300' : 'border-gray-300'
           }`}
           placeholder="Tell us about your project or ask any questions you have..."
