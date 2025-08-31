@@ -94,18 +94,15 @@ const Gallery: React.FC = () => {
 
 
         {/* Gallery Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          layout
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {galleryItems.map((item, index) => (
             <motion.div
               key={item.id}
-              className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
-              layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-500"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
               whileHover={{ y: -5 }}
             >
               {/* Image */}
@@ -144,7 +141,7 @@ const Gallery: React.FC = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
         <motion.div 

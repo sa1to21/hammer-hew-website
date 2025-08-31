@@ -2,7 +2,6 @@ import { lazy, useState, useRef, useEffect } from 'react';
 
 // Lazy load components for better performance
 export const LazyGallery = lazy(() => import('../components/sections/Gallery'));
-export const LazyProcess = lazy(() => import('../components/sections/Process'));
 export const LazyContact = lazy(() => import('../components/sections/Contact'));
 // export const LazyBeforeAfterGallery = lazy(() => import('../components/sections/BeforeAfterGallery'));
 export const LazyTestimonials = lazy(() => import('../components/sections/Testimonials'));

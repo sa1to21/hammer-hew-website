@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden border-b border-slate-200/20 shadow-sm">
+    <section id="hero" className="relative min-h-screen overflow-hidden border-b border-slate-200/20 shadow-sm">
       {/* Hero Background Image */}
       <div className="absolute inset-0">
         <img 

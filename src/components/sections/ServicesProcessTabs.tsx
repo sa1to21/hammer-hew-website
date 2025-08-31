@@ -136,10 +136,10 @@ const ServicesProcessTabs: React.FC = () => {
           {activeTab === 'services' && (
             <motion.div
               key="services"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.4 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               className="flex-1"
             >
               {/* Services Grid */}
@@ -149,13 +149,14 @@ const ServicesProcessTabs: React.FC = () => {
                   return (
                     <motion.div
                       key={index}
-                      className={`relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-6 h-full flex flex-col ${
+                      className={`relative bg-white rounded-xl shadow-md p-6 h-full flex flex-col ${
                         service.popular ? 'ring-2 ring-amber-500 ring-opacity-60' : ''
                       }`}
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                      whileHover={{ y: -4, scale: 1.02, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
                     >
                       {/* Popular Badge */}
                       {service.popular && (
@@ -201,10 +202,10 @@ const ServicesProcessTabs: React.FC = () => {
           {activeTab === 'process' && (
             <motion.div
               key="process"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.4 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               className="flex-1"
             >
               {/* Process Steps - Card Layout */}
@@ -214,11 +215,12 @@ const ServicesProcessTabs: React.FC = () => {
                   return (
                     <motion.div
                       key={step.id}
-                      className="relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-6 h-full flex flex-col"
+                      className="relative bg-white rounded-xl shadow-md p-6 h-full flex flex-col"
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                      whileHover={{ y: -4, scale: 1.02, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
                     >
                       {/* Step Number Badge */}
                       <div className="absolute -top-3 -left-3">

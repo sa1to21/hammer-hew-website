@@ -105,8 +105,8 @@ const GoogleMapWithFallback: React.FC<GoogleMapWithFallbackProps> = ({ className
         title: businessLocation.name,
         icon: {
           url: '/logo.png',
-          scaledSize: new window.google.maps.Size(55, 61),
-          anchor: new window.google.maps.Point(27.5, 30.5),
+          scaledSize: new window.google.maps.Size(44, 49),
+          anchor: new window.google.maps.Point(22, 24.5),
           optimized: false
         }
       });
@@ -138,21 +138,23 @@ const GoogleMapWithFallback: React.FC<GoogleMapWithFallbackProps> = ({ className
         infoWindow.open(map, marker);
       });
 
-      // Pennsylvania service area polygon (25 mile radius, PA only)
+      // Pennsylvania service area polygon - custom boundary
       const paServiceArea = new window.google.maps.Polygon({
         paths: [
-          {lat: 39.811593, lng: -75.420249}, // Southwest - Media/Upper Darby area
-          {lat: 39.902647, lng: -75.524125}, // West - King of Prussia/Norristown area
-          {lat: 39.965448, lng: -75.477070}, // Northwest - Plymouth Meeting area
-          {lat: 40.010680, lng: -75.389191}, // North - Abington/Jenkintown area
-          {lat: 40.042722, lng: -75.295096}, // Northeast - Warminster/Horsham area
-          {lat: 40.105237, lng: -75.209818}, // Northeast - Doylestown area
-          {lat: 40.106237, lng: -75.110929}, // East - New Hope area (PA/NJ border)
-          {lat: 40.104953, lng: -74.994754}, // East - Trenton area (PA side)
-          {lat: 40.063349, lng: -74.968139}, // Southeast - Levittown area
-          {lat: 39.977955, lng: -75.105090}, // Southeast - Philadelphia Airport area
-          {lat: 39.885477, lng: -75.140961}, // South - Chester/Ridley area
-          {lat: 39.854555, lng: -75.280732}  // South - Springfield/Swarthmore area
+          {lat: 39.885779, lng: -75.145488},
+          {lat: 39.800513, lng: -75.414954},
+          {lat: 39.640982, lng: -75.613379},
+          {lat: 39.760978, lng: -75.768526},
+          {lat: 39.911661, lng: -75.872302},
+          {lat: 40.143008, lng: -75.942340},
+          {lat: 40.286678, lng: -75.879168},
+          {lat: 40.401812, lng: -75.674548},
+          {lat: 40.500045, lng: -75.450701},
+          {lat: 40.567887, lng: -75.191149},
+          {lat: 40.413315, lng: -75.046954},
+          {lat: 40.152148, lng: -74.730513},
+          {lat: 40.074429, lng: -74.955733},
+          {lat: 39.887032, lng: -75.142222}
         ],
         strokeColor: '#059669',
         strokeOpacity: 0.8,

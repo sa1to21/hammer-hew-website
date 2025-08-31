@@ -37,7 +37,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a 
-              href="#why-choose-us"
+              href="#hero"
               className="block"
             >
               <img 

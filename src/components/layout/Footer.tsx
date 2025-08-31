@@ -8,19 +8,21 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-800 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 items-start">
           {/* Company Info */}
-          <div>
-            <img 
-              src="/logo.png" 
-              alt="Hammer & Hew LLC - Professional Deck Construction Philadelphia" 
-              className="h-25 w-auto mb-4"
-            />
-            <p className="text-gray-300 mb-4">
+          <div className="flex flex-col h-full text-center">
+            <div className="mb-6 -mt-6">
+              <img 
+                src="/logo.png" 
+                alt="Hammer & Hew LLC - Professional Deck Construction Philadelphia" 
+                className="h-70 w-auto mx-auto"
+              />
+            </div>
+            <p className="text-gray-300 mb-6 text-sm leading-relaxed flex-grow">
               Professional deck construction and restoration services. 
               Licensed, insured, and committed to quality craftsmanship.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mt-auto justify-center">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
@@ -31,57 +33,72 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h3 className="font-heading text-lg font-semibold mb-4 text-white">Contact Us</h3>
-            <div className="space-y-3">
-              <a href="tel:(917)250-2222" className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
-                <Phone className="w-4 h-4" />
-                <span>(917) 250-2222</span>
+          <div className="flex flex-col h-full">
+            <h3 className="font-heading text-lg font-semibold mb-6 text-white">Contact Us</h3>
+            <div className="space-y-4 flex-grow">
+              <a href="tel:(917)250-2222" className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors group">
+                <Phone className="w-4 h-4 flex-shrink-0" />
+                <span className="text-sm">(917) 250-2222</span>
               </a>
-              <a href="mailto:hammerandhewllc@gmail.com" className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
-                <Mail className="w-4 h-4" />
-                <span>hammerandhewllc@gmail.com</span>
+              <a href="mailto:hammerandhewllc@gmail.com" className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors group">
+                <Mail className="w-4 h-4 flex-shrink-0" />
+                <span className="text-sm break-words">hammerandhewllc@gmail.com</span>
               </a>
               <div className="flex items-start space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4 mt-1" />
-                <span>Philadelphia, Pennsylvania</span>
+                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                <span className="text-sm">Philadelphia, Pennsylvania</span>
               </div>
               <div className="flex items-start space-x-3 text-gray-300">
-                <Clock className="w-4 h-4 mt-1" />
-                <span>Mon-Sat: 8AM-6PM<br />Sun: Emergency Only</span>
+                <Clock className="w-4 h-4 mt-1 flex-shrink-0" />
+                <div className="text-sm">
+                  <div>Mon-Sat: 8AM-6PM</div>
+                  <div>Sun: Emergency Only</div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Services */}
-          <div>
-            <h3 className="font-heading text-lg font-semibold mb-4 text-white">Our Services</h3>
-            <ul className="space-y-2">
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">New Deck Construction</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Deck Restoration</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Staining & Sealing</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Custom Design</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Deck Repair</a></li>
+          <div className="flex flex-col h-full">
+            <h3 className="font-heading text-lg font-semibold mb-6 text-white">Our Services</h3>
+            <ul className="space-y-3 flex-grow">
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors text-sm block">New Deck Construction</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors text-sm block">Deck Restoration</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors text-sm block">Staining & Sealing</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors text-sm block">Custom Design</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors text-sm block">Deck Repair</a></li>
             </ul>
           </div>
 
           {/* Reviews & Trust */}
-          <div>
-            <h3 className="font-heading text-lg font-semibold mb-4 text-white">Trusted Service</h3>
-            <div className="space-y-3">
+          <div className="flex flex-col h-full">
+            <h3 className="font-heading text-lg font-semibold mb-6 text-white">Trusted Service</h3>
+            <div className="space-y-4 flex-grow">
               <div className="flex items-center space-x-2">
                 <div className="flex">
                   {[1,2,3,4,5].map((star) => (
                     <Star key={star} className="w-4 h-4 text-yellow-500 fill-current" />
                   ))}
                 </div>
-                <span className="text-gray-300">4.9/5 (150+ reviews)</span>
+                <span className="text-gray-300 text-sm">4.9/5 (150+ reviews)</span>
               </div>
-              <div className="text-sm text-gray-300">
-                <p>✓ Licensed & Insured</p>
-                <p>✓ Quality Guarantee</p>
-                <p>✓ Thumbtack Pro</p>
-                <p>✓ 5+ Years Experience</p>
+              <div className="space-y-2 text-sm text-gray-300">
+                <p className="flex items-center">
+                  <span className="text-emerald-400 mr-2">✓</span>
+                  Licensed & Insured
+                </p>
+                <p className="flex items-center">
+                  <span className="text-emerald-400 mr-2">✓</span>
+                  Quality Guarantee
+                </p>
+                <p className="flex items-center">
+                  <span className="text-emerald-400 mr-2">✓</span>
+                  Thumbtack Pro
+                </p>
+                <p className="flex items-center">
+                  <span className="text-emerald-400 mr-2">✓</span>
+                  5+ Years Experience
+                </p>
               </div>
             </div>
           </div>
