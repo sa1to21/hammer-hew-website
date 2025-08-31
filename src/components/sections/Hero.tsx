@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0">
         <img 
           src="/images/hero/main.jpg" 
-          alt="Professional deck construction" 
+          alt="Professional deck construction and restoration services in Philadelphia PA by Hammer & Hew LLC" 
           className="w-full h-full object-cover object-bottom"
         />
         <div className="absolute inset-0 bg-slate-900/60"></div>

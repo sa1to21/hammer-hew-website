@@ -6,6 +6,8 @@ interface BeforeAfterSliderProps {
   afterImage: string;
   beforeLabel?: string;
   afterLabel?: string;
+  beforeAlt?: string;
+  afterAlt?: string;
   className?: string;
 }
 
@@ -14,6 +16,8 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
   afterImage,
   beforeLabel = "Before",
   afterLabel = "After",
+  beforeAlt = "Before deck restoration",
+  afterAlt = "After deck restoration",
   className = ""
 }) => {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -60,7 +64,7 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
       <div className="relative w-full h-full">
         <img
           src={beforeImage}
-          alt="Before"
+          alt={beforeAlt}
           className="w-full h-full object-cover"
           draggable={false}
         />
@@ -78,7 +82,7 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
       >
         <img
           src={afterImage}
-          alt="After"
+          alt={afterAlt}
           className="w-full h-full object-cover"
           draggable={false}
         />

@@ -112,7 +112,7 @@ const Gallery: React.FC = () => {
               <div className="relative overflow-hidden">
                 <img
                   src={item.imageUrl}
-                  alt={item.title}
+                  alt={`${item.title} - Professional deck ${item.category.replace('-', ' ')} in ${item.location} by Hammer & Hew LLC`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 

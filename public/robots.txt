@@ -1,19 +1,44 @@
+# Robots.txt for Hammer & Hew LLC - Philadelphia Deck Construction
+# Updated: 2025-08-31
+
+# Allow all search engines full access
 User-agent: *
 Allow: /
 
-# Important pages
+# Specific rules for Google
+User-agent: Googlebot
 Allow: /
-Allow: /services
-Allow: /gallery
-Allow: /contact
-
-# Sitemap
-Sitemap: https://hammerandhew.com/sitemap.xml
-
-# Crawl delay for respectful crawling
 Crawl-delay: 1
 
-# Block common bot traps (if any)
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Block development and system directories
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /dist/
+Disallow: /.git/
+Disallow: /.vscode/
 Disallow: /admin/
 Disallow: /api/
+
+# Block specific file types that shouldn't be indexed
 Disallow: /*.json$
+Disallow: /*.ts$
+Disallow: /*.tsx$
+Disallow: /*.js.map$
+Disallow: /*.css.map$
+
+# Allow important assets
+Allow: /images/
+Allow: /logo.png
+Allow: /favicon.ico
+
+# Sitemap location
+Sitemap: https://hammerandhew.com/sitemap.xml
+
+# Contact information for crawlers
+# Website: https://hammerandhew.com
+# Business: Hammer & Hew LLC - Philadelphia, PA

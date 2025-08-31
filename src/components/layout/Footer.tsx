@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <div>
             <img 
               src="/logo.png" 
-              alt="Hammer & Hew" 
+              alt="Hammer & Hew LLC - Professional Deck Construction Philadelphia" 
               className="h-25 w-auto mb-4"
             />
             <p className="text-gray-300 mb-4">
@@ -96,9 +96,10 @@ const Footer: React.FC = () => {
               © {currentYear} Hammer & Hew. All rights reserved.
             </div>
             <div className="mt-4 md:mt-0">
-              <div className="flex space-x-6 text-sm text-gray-400">
-                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-400">
+                <span className="text-emerald-400">✓ Licensed & Insured</span>
+                <span className="text-emerald-400">✓ Free Estimates</span>
+                <span className="text-emerald-400">✓ Philadelphia Service Area</span>
                 <span>License #XXXXXX</span>
                 <span>HICPA #******</span>
               </div>
