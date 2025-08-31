@@ -1,6 +1,7 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, Clock } from 'lucide-react';
 import MainContactForm from '../ui/MainContactForm';
+import GoogleMapWithFallback from '../ui/GoogleMapWithFallback';
 
 const Contact: React.FC = () => {
   const contactMethods = [
@@ -8,7 +9,7 @@ const Contact: React.FC = () => {
       icon: Phone,
       title: "Call Us",
       primary: "(917) 250-2222",
-      secondary: "Mon-Sat: 8AM-6PM, Sun: Closed",
+      secondary: "Mon-Sat: 8AM-6PM, Sun: Emergency Only",
       action: "tel:(917)250-2222",
     },
     {
@@ -17,13 +18,6 @@ const Contact: React.FC = () => {
       primary: "hammerandhewllc@gmail.com",
       secondary: "We respond within 1 hour",
       action: "mailto:hammerandhewllc@gmail.com",
-    },
-    {
-      icon: MapPin,
-      title: "Service Area",
-      primary: "Philadelphia, Pennsylvania",
-      secondary: "Free consultations within 25 miles",
-      action: "#",
     },
   ];
 
@@ -76,8 +70,12 @@ const Contact: React.FC = () => {
               })}
             </div>
 
-            {/* Business Hours */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8">
+            {/* Service Area Map or Card Fallback */}
+            <GoogleMapWithFallback className="mt-6" />
+
+            {/* Business Hours - Commented out for cleaner layout */}
+            {/*
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 mt-6">
               <div className="flex items-center space-x-3 mb-6">
                 <Clock className="w-6 h-6 text-green-800" />
                 <h3 className="text-xl font-semibold text-gray-800">Business Hours</h3>
@@ -100,6 +98,7 @@ const Contact: React.FC = () => {
                 </p>
               </div>
             </div>
+            */}
 
           </div>
 

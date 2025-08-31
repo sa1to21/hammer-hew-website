@@ -4,8 +4,8 @@ import ContactForm from './ContactForm';
 
 const MainContactForm: React.FC = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 max-w-md mx-auto">
-      <div className="mb-6">
+    <div className="bg-white rounded-2xl shadow-2xl p-8 sm:p-10 max-w-md mx-auto">
+      <div className="mb-8">
         <h2 className="text-2xl sm:text-3xl font-heading text-gray-800 mb-6 text-center">
           Get Your Free Estimate
         </h2>
@@ -26,7 +26,7 @@ const MainContactForm: React.FC = () => {
           </div>
         </div>
         <p className="text-xs text-center text-gray-400 mt-2">
-          Typically responds within 2 hours during business hours
+          Typically responds within 1 hour during business hours
         </p>
       </div>
     </div>

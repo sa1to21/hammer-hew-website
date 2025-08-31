@@ -15,7 +15,7 @@ export const FORMSPREE_CONFIG = {
   
   // Success/Error messages
   MESSAGES: {
-    SUCCESS: 'Thank you for your inquiry! We\'ll respond within 2 business hours.',
+    SUCCESS: 'Thank you for your inquiry! We\'ll respond within 1 business hour.',
     ERROR: 'Sorry, there was an error sending your message. Please call us directly at (555) 123-4567.',
     SUBMITTING: 'Sending your message...'
   }

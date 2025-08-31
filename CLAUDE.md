@@ -41,6 +41,7 @@ npm run lint
 - **SEO**: React Helmet Async + structured data
 - **Icons**: Lucide React
 - **Forms Integration**: Formspree ready (see FORMSPREE_SETUP.md)
+- **Maps Integration**: Google Maps JavaScript API with custom styling
 
 ### Directory Structure
 ```
@@ -70,14 +71,15 @@ hammer-hew-website/
 │   │   │   ├── Gallery.tsx              # 6 real project photos with filtering
 │   │   │   ├── Testimonials.tsx         # Customer reviews + stats
 │   │   │   ├── ServicesProcessTabs.tsx  # Combined Services+Process with tabs
-│   │   │   ├── Contact.tsx              # Main contact form + business info
+│   │   │   ├── Contact.tsx              # Main contact form + business info + Google Maps
 │   │   │   ├── Services.tsx             # (Legacy - not used)
 │   │   │   ├── Process.tsx              # (Legacy - not used)
 │   │   │   └── BeforeAfterGallery.tsx   # (Hidden - can be re-enabled)
 │   │   ├── ui/
 │   │   │   ├── MainContactForm.tsx      # Main lead capture form
 │   │   │   ├── ServiceCard.tsx          # Compact service cards
-│   │   │   ├── ContactForm.tsx          # (Legacy form component)
+│   │   │   ├── ContactForm.tsx          # Form component with validation
+│   │   │   ├── GoogleMapWithFallback.tsx # Interactive Google Maps with service area
 │   │   │   └── AnimatedCard.tsx         # Animation wrapper
 │   │   └── common/
 │   │       ├── SEO.tsx                  # Meta tags & structured data
@@ -161,10 +163,12 @@ Hero → Why Choose Us → Gallery → Reviews → Services & Process (Tabs) →
 
 **6. Contact**
 - Main contact form with simplified fields (Name, Email, Phone, Message) - removed Service Type field for better conversion rates
+- Interactive Google Maps showing exact business location and Pennsylvania service area polygon
+- Service area visualization with custom polygon covering 25-mile radius within PA boundaries
 - Gradient background for warm, welcoming feel (from-green-50 via-white to-amber-50)
 - Multiple contact methods with updated business hours (Mon-Sat: 8AM-6PM, Sun: Emergency Only)
-- Philadelphia, PA service area with free consultation within 25 miles
-- Removed subtitle from contact form for minimal, clean design
+- Google Maps with fallback to styled contact card if map fails to load
+- Custom company logo marker positioned at 1112 N Hancock St, Philadelphia
 
 ## Development Progress Status
 
@@ -242,7 +246,7 @@ Hero → Why Choose Us → Gallery → Reviews → Services & Process (Tabs) →
 - **Navigation Font Weight**: Enhanced navigation text visibility with bold font weight for better mobile readability
 - **License Information**: Added HICPA license number to footer for professional credibility
 
-### ✅ COMPLETED - ЭТАП 9: SEO & Documentation Enhancement (Latest Update)
+### ✅ COMPLETED - ЭТАП 9: SEO & Documentation Enhancement
 - **SEO Foundation**: Updated sitemap.xml with current site structure, Philadelphia location targeting, and proper lastmod dates
 - **Robots.txt Optimization**: Enhanced robots.txt with specific crawler rules, security blocks, and Philadelphia branding
 - **Alt Text SEO Optimization**: Comprehensive improvement of all image alt texts for better search engine visibility
@@ -255,6 +259,18 @@ Hero → Why Choose Us → Gallery → Reviews → Services & Process (Tabs) →
   - Maintained license number display for professional credibility
 - **URL Structure Validation**: Confirmed clean anchor-based navigation system for optimal user experience and SEO
 
+### ✅ COMPLETED - ЭТАП 10: Google Maps Integration (Latest Update)
+- **Interactive Google Maps**: Full implementation of Google Maps JavaScript API with business location marker
+- **Service Area Visualization**: Custom polygon showing exact 25-mile service area within Pennsylvania boundaries
+- **Smart Fallback System**: Graceful degradation to styled contact card when map fails to load
+- **Custom Styling**: Clean map appearance with POI markers hidden for professional look
+- **Business Location Marker**: Company logo as custom marker (55x61px) positioned at actual business address
+- **Optimized Map View**: Camera positioned west of business location (zoom level 11) to showcase service area
+- **English Language**: Forced English language display regardless of user's browser locale
+- **Mobile Responsive**: Maps component fully responsive with proper height (450px) and touch controls
+- **Error Handling**: Comprehensive error handling for API key issues, quota limits, and network failures
+- **Environment Configuration**: Proper API key setup via VITE_GOOGLE_MAPS_API_KEY environment variable
+
 ### 🎆 PROJECT COMPLETE - PRODUCTION READY
 **Live Site**: Deployed on Netlify with custom domain support
 **Contact Integration**: Working contact forms with real business email
@@ -263,14 +279,16 @@ Hero → Why Choose Us → Gallery → Reviews → Services & Process (Tabs) →
 
 ### 🔄 FUTURE ENHANCEMENTS (Optional):
 - Before/After gallery (component ready, currently hidden)
-- Google Maps integration for service area visualization
 - A/B testing setup for conversion optimization
 - Customer testimonials video integration
 - Blog system for content marketing
+- Google Maps directions integration
+- Service area heat map visualization
 
 ## Key Features Implemented
 
 - **Lead Generation**: 2 contact forms with validation
+- **Interactive Maps**: Google Maps integration with service area visualization
 - **Trust Building**: Statistics, certifications, testimonials
 - **Mobile-First**: Responsive design for all devices
 - **SEO-Ready**: Meta tags, structured data, semantic HTML
@@ -295,6 +313,14 @@ Hero → Why Choose Us → Gallery → Reviews → Services & Process (Tabs) →
 1. Follow instructions in `FORMSPREE_SETUP.md`
 2. Update `src/utils/formConfig.ts` with your endpoint
 3. Uncomment Formspree code in `src/components/ui/ContactForm.tsx`
+
+### Google Maps Configuration:
+1. **API Key Setup**: Create Google Cloud Console project and enable Maps JavaScript API
+2. **Environment Variables**: Add `VITE_GOOGLE_MAPS_API_KEY=your_api_key` to `.env` file
+3. **Production Deployment**: Add API key to hosting platform environment variables (Netlify/Vercel)
+4. **API Restrictions**: Configure HTTP referrers in Google Cloud Console for security
+5. **Billing**: Enable billing account (required even for free tier usage)
+6. **Map Customization**: Edit `src/components/ui/GoogleMapWithFallback.tsx` for styling/features
 
 ## Version Control & Repository
 
