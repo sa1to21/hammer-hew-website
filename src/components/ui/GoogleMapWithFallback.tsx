@@ -200,8 +200,8 @@ const GoogleMapWithFallback: React.FC<GoogleMapWithFallbackProps> = ({ className
     loadGoogleMapsScript();
     
     return () => {
-      if (window.initMap) {
-        delete window.initMap;
+      if ((window as any).initMap) {
+        delete (window as any).initMap;
       }
     };
   }, []);

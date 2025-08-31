@@ -174,7 +174,7 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
       });
 
       // Service area circle (25 mile radius)
-      const serviceArea = new window.google.maps.Circle({
+      new window.google.maps.Circle({
         center: businessLocation,
         radius: 40233.6, // 25 miles in meters
         fillColor: '#059669',
@@ -198,8 +198,8 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
     
     // Cleanup function
     return () => {
-      if (window.initMap) {
-        delete window.initMap;
+      if ((window as any).initMap) {
+        delete (window as any).initMap;
       }
     };
   }, []);

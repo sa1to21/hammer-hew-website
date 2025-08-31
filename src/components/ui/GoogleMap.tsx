@@ -180,8 +180,8 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
     loadGoogleMapsScript();
     
     return () => {
-      if (window.initMap) {
-        delete window.initMap;
+      if ((window as any).initMap) {
+        delete (window as any).initMap;
       }
     };
   }, []);

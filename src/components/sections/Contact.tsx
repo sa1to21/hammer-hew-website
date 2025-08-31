@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import MainContactForm from '../ui/MainContactForm';
 import GoogleMapWithFallback from '../ui/GoogleMapWithFallback';
 
