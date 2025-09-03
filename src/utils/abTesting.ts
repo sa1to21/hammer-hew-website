@@ -145,7 +145,7 @@ class ABTesting {
     const userKey = userId || 'anonymous';
     const keysToDelete: string[] = [];
     
-    for (const [key, _] of this.userVariants) {
+    for (const [key] of this.userVariants) {
       if (key.includes(userKey)) {
         keysToDelete.push(key);
       }

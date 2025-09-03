@@ -2,12 +2,13 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Phone, Mail, User } from 'lucide-react';
+import { Phone, Mail, User, MapPin } from 'lucide-react';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Please enter a valid email address'),
   phone: z.string().min(10, 'Please enter a valid phone number'),
+  zipCode: z.string().regex(/^\d{5}(-\d{4})?$/, 'Please enter a valid ZIP code (e.g., 19103 or 19103-1234)'),
   message: z.string().min(10, 'Please share your message or question'),
 });
 
@@ -112,6 +113,30 @@ const ContactForm: React.FC = () => {
         </div>
         {errors.phone && (
           <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
+        )}
+      </div>
+
+      {/* ZIP Code Field */}
+      <div>
+        <label htmlFor="zipCode" className="block text-sm font-medium text-gray-700 mb-2">
+          ZIP Code *
+        </label>
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <MapPin className="h-4 w-4 text-gray-400" />
+          </div>
+          <input
+            {...register('zipCode')}
+            type="text"
+            id="zipCode"
+            className={`block w-full pl-10 pr-3 py-3 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent ${
+              errors.zipCode ? 'border-red-300' : 'border-gray-300'
+            }`}
+            placeholder="19103"
+          />
+        </div>
+        {errors.zipCode && (
+          <p className="mt-1 text-sm text-red-600">{errors.zipCode.message}</p>
         )}
       </div>
 

@@ -21,7 +21,7 @@ export const FORMSPREE_CONFIG = {
   }
 };
 
-export const submitToFormspree = async (formData: any, endpoint: string = FORMSPREE_CONFIG.CONTACT_FORM_ENDPOINT) => {
+export const submitToFormspree = async (formData: Record<string, unknown>, endpoint: string = FORMSPREE_CONFIG.CONTACT_FORM_ENDPOINT) => {
   try {
     const response = await fetch(endpoint, {
       ...FORMSPREE_CONFIG.SETTINGS,
