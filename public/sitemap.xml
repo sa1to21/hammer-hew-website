@@ -5,7 +5,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://hammerandhew.com/</loc>
-    <lastmod>2025-08-31</lastmod>
+    <lastmod>2025-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -23,7 +23,7 @@
   <!-- Gallery Section -->
   <url>
     <loc>https://hammerandhew.com/#gallery</loc>
-    <lastmod>2025-08-31</lastmod>
+    <lastmod>2025-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -41,7 +41,7 @@
   <!-- Reviews/Testimonials Section -->
   <url>
     <loc>https://hammerandhew.com/#reviews</loc>
-    <lastmod>2025-08-31</lastmod>
+    <lastmod>2025-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -49,7 +49,7 @@
   <!-- Services Section -->
   <url>
     <loc>https://hammerandhew.com/#services</loc>
-    <lastmod>2025-08-31</lastmod>
+    <lastmod>2025-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -57,7 +57,7 @@
   <!-- Contact Section -->
   <url>
     <loc>https://hammerandhew.com/#contact</loc>
-    <lastmod>2025-08-31</lastmod>
+    <lastmod>2025-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
