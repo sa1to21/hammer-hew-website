@@ -7,7 +7,28 @@ const WhyChooseUs: React.FC = () => {
     {
       icon: Shield,
       title: "Licensed & Insured",
-      description: "Fully licensed contractor with $2M general liability insurance. Licensed #XXXXXX"
+      description: (
+        <>
+          Licensed contractor with{" "}
+          <a
+            href="/liability.PNG"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-600 hover:text-emerald-700 underline"
+          >
+            commercial general liability insurance
+          </a>
+          {" "}(limit $2.000.000).{" "}
+          <a
+            href="/PA Home.PNG"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-600 hover:text-emerald-700 underline"
+          >
+            License №064383
+          </a>
+        </>
+      )
     },
     {
       icon: Award,

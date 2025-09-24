@@ -46,7 +46,14 @@ const Footer: React.FC = () => {
               </a>
               <div className="flex items-start space-x-3 text-gray-300">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span className="text-sm">Philadelphia, Pennsylvania</span>
+                <a
+                  href="https://www.google.ru/maps/place/Hammer+%26+Hew/@39.9677477,-75.1412168,17z/data=!3m1!4b1!4m6!3m5!1s0x89c6c987fb1332ef:0x8ef3fec8d0cf4e78!8m2!3d39.9677477!4d-75.1386419!16s%2Fg%2F11xv0bz1k2?entry=ttu&g_ep=EgoyMDI1MDkyMi4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm hover:text-white transition-colors"
+                >
+                  Philadelphia, Pennsylvania
+                </a>
               </div>
               <div className="flex items-start space-x-3 text-gray-300">
                 <Clock className="w-4 h-4 mt-1 flex-shrink-0" />
@@ -85,7 +92,23 @@ const Footer: React.FC = () => {
               <div className="space-y-2 text-sm text-gray-300">
                 <p className="flex items-center">
                   <span className="text-emerald-400 mr-2">✓</span>
-                  Licensed & Insured
+                  <a
+                    href="/PA Home.PNG"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors"
+                  >
+                    Licensed
+                  </a>
+                  <span className="mx-1">&</span>
+                  <a
+                    href="/liability.PNG"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors"
+                  >
+                    Insured
+                  </a>
                 </p>
                 <p className="flex items-center">
                   <span className="text-emerald-400 mr-2">✓</span>
@@ -117,8 +140,14 @@ const Footer: React.FC = () => {
                 <span className="text-emerald-400">✓ Licensed & Insured</span>
                 <span className="text-emerald-400">✓ Free Estimates</span>
                 <span className="text-emerald-400">✓ Philadelphia Service Area</span>
-                <span>License #XXXXXX</span>
-                <span>HICPA #******</span>
+                <a
+                  href="/PA Home.PNG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 hover:text-white underline transition-colors"
+                >
+                  License №064383
+                </a>
               </div>
             </div>
           </div>
