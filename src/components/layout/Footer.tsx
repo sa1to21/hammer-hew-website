@@ -148,6 +148,7 @@ const Footer: React.FC = () => {
                 >
                   License №064383
                 </a>
+                <span className="text-emerald-400">HICR number: T284</span>
               </div>
             </div>
           </div>
