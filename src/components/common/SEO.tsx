@@ -12,9 +12,9 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Professional Deck Construction & Restoration | Philadelphia, PA | Hammer & Hew LLC",
-  description = "Expert deck construction, restoration & repair services in Philadelphia, PA. Licensed & insured contractor with 15+ years experience. 10-year warranty. Free estimates. Call (917) 250-2222 - hammerandhewllc@gmail.com",
-  keywords = "deck construction Philadelphia, deck restoration PA, deck builder Pennsylvania, outdoor decking contractor, custom deck construction, deck repair services, licensed deck contractor Philadelphia, composite decking, wood deck restoration",
+  title = "Deck Builder Philadelphia | Installation, Repair & Composite Decking | Hammer & Hew",
+  description = "Philadelphia's top deck builders. Deck installation, repair & composite decking. Custom porches & railings. Licensed & insured. Free estimates. (917) 250-2222",
+  keywords = "deck builder philadelphia, deck installation philadelphia, deck installers philadelphia, deck repair philadelphia, composite decking philadelphia pa, deck contractors near me, porch installation philadelphia, deck railing installation, custom deck construction, deck restoration PA, outdoor decking contractor, licensed deck contractor",
   image = "/og-image.jpg",
   url = "https://hammerandhew.com",
   type = "website",
