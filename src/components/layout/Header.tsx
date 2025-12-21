@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Menu, X, Instagram, Facebook } from 'lucide-react';
+import { Phone, Menu, X } from 'lucide-react';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -90,21 +91,21 @@ const Header: React.FC = () => {
             
             {/* Social Icons */}
             <div className="flex items-center space-x-3 border-l border-white/30 pl-6">
-              <a 
-                href="https://instagram.com/hammerandhew" 
-                target="_blank" 
+              <a
+                href="https://www.instagram.com/hammerandhewllc/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-pink-400 transition-colors"
               >
-                <Instagram className="w-5 h-5" />
+                <FaInstagram className="w-5 h-5" />
               </a>
-              <a 
-                href="https://facebook.com/hammerandhew" 
-                target="_blank" 
+              <a
+                href="https://www.facebook.com/profile.php?id=61585268319686"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-blue-400 transition-colors"
               >
-                <Facebook className="w-5 h-5" />
+                <FaFacebook className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -162,21 +163,21 @@ const Header: React.FC = () => {
               
               {/* Social Icons */}
               <div className="flex items-center justify-center space-x-8 py-4 border-t border-white/20">
-                <a 
-                  href="https://instagram.com/hammerandhew" 
-                  target="_blank" 
+                <a
+                  href="https://www.instagram.com/hammerandhewllc/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-pink-400 transition-colors transform hover:scale-110"
                 >
-                  <Instagram className="w-7 h-7" />
+                  <FaInstagram className="w-7 h-7" />
                 </a>
-                <a 
-                  href="https://facebook.com/hammerandhew" 
-                  target="_blank" 
+                <a
+                  href="https://www.facebook.com/profile.php?id=61585268319686"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-blue-400 transition-colors transform hover:scale-110"
                 >
-                  <Facebook className="w-7 h-7" />
+                  <FaFacebook className="w-7 h-7" />
                 </a>
               </div>
             </div>
