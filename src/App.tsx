@@ -1,13 +1,14 @@
-import { Suspense, useEffect } from 'react';
+import { Suspense, useEffect, lazy } from 'react';
 import Layout from './components/layout/Layout';
 import SEO from './components/common/SEO';
 import Hero from './components/sections/Hero';
-import ServicesProcessTabs from './components/sections/ServicesProcessTabs';
-import WhyChooseUs from './components/sections/WhyChooseUs';
 import LoadingSpinner from './components/ui/LoadingSpinner';
-import { LazyGallery, LazyContact, /* LazyBeforeAfterGallery, */ LazyTestimonials } from './utils/lazyLoading';
+import { LazyGallery, LazyContact, LazyTestimonials } from './utils/lazyLoading';
 import { initializeABTests } from './utils/abTestsConfig';
 import { analytics } from './utils/analytics';
+
+const LazyServicesProcessTabs = lazy(() => import('./components/sections/ServicesProcessTabs'));
+const LazyWhyChooseUs = lazy(() => import('./components/sections/WhyChooseUs'));
 
 function App() {
   // Initialize A/B tests and analytics on app start
@@ -22,11 +23,11 @@ function App() {
       <SEO />
       <Layout>
         <Hero />
-        <WhyChooseUs />
         <Suspense fallback={<LoadingSpinner />}>
+          <LazyWhyChooseUs />
           <LazyGallery />
           <LazyTestimonials />
-          <ServicesProcessTabs />
+          <LazyServicesProcessTabs />
           {/* <LazyBeforeAfterGallery /> */}
           <LazyContact />
         </Suspense>
