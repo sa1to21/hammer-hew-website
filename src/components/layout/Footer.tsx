@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
                 <p className="flex items-center">
                   <span className="text-emerald-400 mr-2">✓</span>
                   <a
-                    href="/PA Home.PNG"
+                    href="/PA Home.webp"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors"
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
                   </a>
                   <span className="mx-1">&</span>
                   <a
-                    href="/liability.PNG"
+                    href="/liability.webp"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors"
@@ -163,7 +163,7 @@ const Footer: React.FC = () => {
                 <span className="text-emerald-400">✓ Free Estimates</span>
                 <span className="text-emerald-400">✓ Philadelphia Service Area</span>
                 <a
-                  href="/PA Home.PNG"
+                  href="/PA Home.webp"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-emerald-400 hover:text-white underline transition-colors"

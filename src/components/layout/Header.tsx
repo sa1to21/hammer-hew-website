@@ -42,7 +42,7 @@ const Header: React.FC = () => {
               className="block"
             >
               <img 
-                src="/logo.png" 
+                src="/logo.webp" 
                 alt="Hammer & Hew LLC - Professional Deck Construction Philadelphia" 
                 className="w-auto transition-all duration-300 hover:opacity-80"
                 style={{

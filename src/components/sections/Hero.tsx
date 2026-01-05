@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
       {/* Hero Background Image */}
       <div className="absolute inset-0">
         <img 
-          src="/images/hero/main.jpg" 
+          src="/images/hero/main.webp" 
           alt="Professional deck construction and restoration services in Philadelphia PA by Hammer & Hew LLC" 
           className="w-full h-full object-cover object-bottom"
           fetchPriority="high"

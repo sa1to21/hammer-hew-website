@@ -104,7 +104,7 @@ const GoogleMapWithFallback: React.FC<GoogleMapWithFallbackProps> = ({ className
         map: map,
         title: businessLocation.name,
         icon: {
-          url: '/logo.png',
+          url: '/logo-small.png',
           scaledSize: new window.google.maps.Size(44, 49),
           anchor: new window.google.maps.Point(22, 24.5),
           optimized: false
@@ -199,9 +199,23 @@ const GoogleMapWithFallback: React.FC<GoogleMapWithFallbackProps> = ({ className
   };
 
   useEffect(() => {
-    loadGoogleMapsScript();
-    
+    // Only load maps when element is in viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          loadGoogleMapsScript();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' } // Load shortly before it comes into view
+    );
+
+    if (mapRef.current) {
+      observer.observe(mapRef.current);
+    }
+
     return () => {
+      observer.disconnect();
       if ((window as any).initMap) {
         delete (window as any).initMap;
       }

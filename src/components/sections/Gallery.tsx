@@ -21,7 +21,7 @@ const Gallery: React.FC = () => {
       category: "new-construction",
       location: "Philadelphia, PA",
       description: "Custom composite deck construction with premium materials and expert craftsmanship",
-      imageUrl: "/images/gallery/new-construction/new-001.jpg",
+      imageUrl: "/images/gallery/new-construction/new-001.webp",
       tags: ["Composite", "Modern", "New Construction"]
     },
     {
@@ -30,7 +30,7 @@ const Gallery: React.FC = () => {
       category: "new-construction", 
       location: "Philadelphia, PA",
       description: "Beautiful new deck build with attention to detail and quality materials",
-      imageUrl: "/images/gallery/new-construction/new-002.jpg",
+      imageUrl: "/images/gallery/new-construction/new-002.webp",
       tags: ["New Build", "Elegant", "Quality"]
     },
     {
@@ -39,7 +39,7 @@ const Gallery: React.FC = () => {
       category: "restoration",
       location: "Broomall, PA", 
       description: "Complete deck restoration bringing new life to weathered decking",
-      imageUrl: "/images/gallery/restoration/restoration-001.jpg",
+      imageUrl: "/images/gallery/restoration/restoration-001.webp",
       tags: ["Restoration", "Professional", "Renewal"]
     },
     {
@@ -48,7 +48,7 @@ const Gallery: React.FC = () => {
       category: "restoration",
       location: "Philadelphia, PA",
       description: "Skillful restoration work transforming old decks into beautiful spaces",
-      imageUrl: "/images/gallery/restoration/restoration-002.jpg",
+      imageUrl: "/images/gallery/restoration/restoration-002.webp",
       tags: ["Renovation", "Expert", "Transformation"]
     },
     {
@@ -57,7 +57,7 @@ const Gallery: React.FC = () => {
       category: "restoration",
       location: "Chester, PA",
       description: "High-quality restoration services with lasting results",
-      imageUrl: "/images/gallery/restoration/restoration-003.jpg",
+      imageUrl: "/images/gallery/restoration/restoration-003.webp",
       tags: ["Quality", "Restoration", "Lasting"]
     },
     {
@@ -66,7 +66,7 @@ const Gallery: React.FC = () => {
       category: "restoration",
       location: "Philadelphia, PA",
       description: "Premium restoration work showcasing our commitment to excellence",
-      imageUrl: "/images/gallery/restoration/restoration-004.jpg",
+      imageUrl: "/images/gallery/restoration/restoration-004.webp",
       tags: ["Premium", "Excellence", "Commitment"]
     }
   ];
@@ -111,6 +111,8 @@ const Gallery: React.FC = () => {
                   src={item.imageUrl}
                   alt={`${item.title} - Professional deck ${item.category.replace('-', ' ')} in ${item.location} by Hammer & Hew LLC`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
                 
               </div>
