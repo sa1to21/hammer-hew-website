@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-800 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-8 items-start">
           {/* Company Info */}
           <div className="flex flex-col h-full text-center">
             <div className="mb-6 -mt-6">
@@ -124,6 +124,27 @@ const Footer: React.FC = () => {
                   5+ Years Experience
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Service Areas */}
+          <div className="flex flex-col h-full">
+            <h3 className="font-heading text-lg font-semibold mb-6 text-white">Service Areas</h3>
+            <div className="space-y-2 text-sm text-gray-300 flex-grow">
+               <p className="font-medium text-white mb-2">Philadelphia & Surrounding:</p>
+               <ul className="space-y-1">
+                 <li>West Chester</li>
+                 <li>King of Prussia</li>
+                 <li>Bensalem</li>
+                 <li>Norristown</li>
+                 <li>Ardmore</li>
+                 <li>Drexel Hill</li>
+                 <li>Upper Darby</li>
+                 <li>Havertown</li>
+                 <li>Media</li>
+                 <li>Wayne</li>
+               </ul>
+               <p className="text-xs text-gray-400 mt-2 italic">+ More across PA</p>
             </div>
           </div>
         </div>
