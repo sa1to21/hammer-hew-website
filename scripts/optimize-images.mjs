@@ -41,12 +41,12 @@ async function walkDir(dir) {
     } else if (/\.(jpg|jpeg|png)$/i.test(file)) {
       // Logic for specific files
       if (filePath.endsWith('logo.png')) {
-        await processImage(filePath, { resize: { width: 400 }, quality: 85 });
+        await processImage(filePath, { resize: { width: 400 }, quality: 80 });
       } else if (filePath.includes('hero') && filePath.includes('main.jpg')) {
-        await processImage(filePath, { resize: { width: 1280 }, quality: 80 });
+        await processImage(filePath, { resize: { width: 1280 }, quality: 75 });
       } else {
         // General gallery images
-        await processImage(filePath, { resize: { width: 800, withoutEnlargement: true }, quality: 80 });
+        await processImage(filePath, { resize: { width: 800, withoutEnlargement: true }, quality: 70 });
       }
     }
   }
