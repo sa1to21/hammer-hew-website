@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Star, Shield, FileText, Calendar } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -27,22 +26,12 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] text-center">
           
           {/* Main Content - Centered */}
-          <motion.div 
-            className="flex flex-col items-center space-y-8 max-w-6xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
+          <div className="flex flex-col items-center space-y-8 max-w-6xl mx-auto">
             {/* Title Section */}
             <div className="text-center w-full">
-              <motion.h1 
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-white leading-tight mb-6"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-white leading-tight mb-6">
                 Transform Your Backyard Into Your Family's <span className="text-emerald-400">Favorite Place</span>
-              </motion.h1>
+              </h1>
               
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-2xl mx-auto">
                 Custom deck construction & restoration that lasts generations. 
@@ -106,7 +95,7 @@ const Hero: React.FC = () => {
                 <span className="font-semibold text-emerald-700">Top rated by local customers</span>
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
