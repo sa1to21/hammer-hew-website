@@ -8,6 +8,7 @@ import { initializeABTests } from './utils/abTestsConfig';
 import { analytics } from './utils/analytics';
 
 const LazyServicesProcessTabs = lazy(() => import('./components/sections/ServicesProcessTabs'));
+const LazyFAQ = lazy(() => import('./components/sections/FAQ'));
 const LazyWhyChooseUs = lazy(() => import('./components/sections/WhyChooseUs'));
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <LazyGallery />
           <LazyTestimonials />
           <LazyServicesProcessTabs />
+          <LazyFAQ />
           {/* <LazyBeforeAfterGallery /> */}
           <LazyContact />
         </Suspense>

@@ -24,12 +24,12 @@ const Testimonials: React.FC = () => {
     },
     {
       id: 3,
-      name: "Islam Musael",
+      name: "Kristen Boone",
       location: "Philadelphia, PA",
       rating: 5,
-      text: "After years of “maybe next season,” Konstantin transformed the deck quickly and professionally. I’m thrilled with the outcome. The new layout is perfect for entertaining, and the quality is top-notch.",
-      project: "Complete Deck Restoration",
-      date: "2024-06"
+      text: "I had a wonderful experience with Hammer and Hew. They were very easy to communicate with, very skilled with their work and super respectful of my property. They installed a 6 ft privacy fence on my deck. They came on time, were easy to get scheduled, and offered a fair price for the scope of work. They did a great job and were clean in the process of everything! I have confidence in the work as we have been having really heavy winds after the installation. I was provided with their license and insurance documents before work began to insure their legitimacy. I would absolutely recommend them to anyone looking to have work done on your deck.",
+      project: "Deck Privacy Fence Installation",
+      date: "2024-10"
     },
     {
       id: 4,

@@ -19,6 +19,7 @@ const Header: React.FC = () => {
     { name: 'Gallery', href: '#gallery' },
     { name: 'Reviews', href: '#testimonials' },
     { name: 'Services', href: '#services' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -54,12 +55,12 @@ const Header: React.FC = () => {
 
           {/* Centered Navigation */}
           <nav className="hidden md:block flex-1">
-            <div className="flex justify-center space-x-12">
+            <div className="flex justify-center space-x-6">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="relative text-white hover:text-emerald-400 transition-colors duration-300 font-bold text-lg group"
+                  className="relative text-white hover:text-emerald-400 transition-colors duration-300 font-bold text-base group"
                 >
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>

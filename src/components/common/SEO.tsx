@@ -14,7 +14,7 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
   title = "Deck Builder Philadelphia | Installation, Repair & Composite Decking | Hammer & Hew",
   description = "Philadelphia's top deck builders. Deck installation, repair & composite decking. Custom porches & railings. Licensed & insured. Free estimates. (917) 250-2222",
-  keywords = "deck builder philadelphia, deck installation philadelphia, deck installers philadelphia, deck repair philadelphia, composite decking philadelphia pa, deck contractors near me, porch installation philadelphia, deck railing installation, custom deck construction, deck restoration PA, outdoor decking contractor, licensed deck contractor",
+  keywords = "deck builder philadelphia, deck installation philadelphia, deck installers philadelphia, deck repair philadelphia, composite decking philadelphia pa, deck contractors near me, porch installation philadelphia, deck railing installation, custom deck construction, deck restoration PA, outdoor decking contractor, licensed deck contractor, deck building faq, deck permit philadelphia",
   image = "/og-image.jpg",
   url = "https://hammerandhew.com",
   type = "website",

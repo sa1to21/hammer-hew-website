@@ -53,6 +53,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- FAQ Section -->
+  <url>
+    <loc>https://hammerandhew.com/#faq</loc>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   
   <!-- Contact Section -->
   <url>
